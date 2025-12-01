@@ -5,12 +5,12 @@ use App\Http\Middleware\validation;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('User.index');
 });
 
-Route::get('/index', function () {
-    return view('user.index');
-});
+// Route::get('/index', function () {
+//     return view('user.index');
+// });
 
 //register
 Route::view('/RegisterPage', 'auth.register')->name('Register');
@@ -24,11 +24,11 @@ Route::post('/logindata' , [authController::class , "login"])->name('l_Data');
 //logout
 Route::get('/logout' , [authController::class , "logout"])->name('logout');
 //Admin
-Route::view('/dashboard', 'admin.dashboard')->name('admin')->middleware(validation::class);
+Route::view('/dashboard', 'Admin.dashboard')->name('admin')->middleware(validation::class);
 //users
 Route::view('/indexPage', 'user.index')->name('index');
 //sidebar
-Route::view('/sidebar','admin.sidebar')->name('sidebar');
+Route::view('/sidebar','Admin.sidebar')->name('sidebar');
 // Allusers
 Route::get('/Allusers',[authController::class,'fetch'])->name('fetch-user');
 

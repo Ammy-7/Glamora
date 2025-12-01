@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class authController extends Controller
 {
@@ -41,8 +43,8 @@ public function login(Request $l_req){
     }
 }
 public function logout(){
-    auth::logout();
-    return view('auth.login');
+    Auth::logout();
+    return view('Auth.login');
 }
 
 
@@ -52,7 +54,7 @@ public function logout(){
 public function fetch(){
     $users = User::all();
 
-    return view('admin.Allusers',compact('users'));
+    return view('Admin.Allusers',compact('users'));
 }
 
 

@@ -1,5 +1,5 @@
-@extends('admin.sidebar')
-@section('dashboard')
+{{-- @extends('admin.sidebar')
+@section('dashboard') --}}
 <div class="container">
     <div class="row mt-4">
         <div class="col-12  text-center">
@@ -35,4 +35,4 @@
     </div>
 </div>
     
-@endsection
+{{-- @endsection --}}
