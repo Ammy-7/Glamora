@@ -34,3 +34,6 @@ Route::get('/Allusers',[authController::class,'fetch'])->name('fetch-user');
 
 //deleteuser
 Route::get('/deleteUser{id}',[authController::class,'delete'])->name('delete-user');
+
+//update user
+Route::get('/userupdate/{id}',[authController::class,"edituser"]);

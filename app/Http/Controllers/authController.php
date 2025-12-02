@@ -65,4 +65,24 @@ public function delete($id){
     $dlt=User::destroy($id);
 return redirect()->route('fetch-user');
 }
+
+
+
+
+public function edituser($id){
+    return $id;
+}
+
+public function updateuser(Request $req,$id ){
+$data=user::find($id);
+$myuser=new user();
+$myuser->name=$req->name;
+
+    return $id;
+}
+
+
+
+
+
 }

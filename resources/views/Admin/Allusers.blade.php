@@ -23,7 +23,8 @@
         <td>{{$user->email}}</td>
         <td>{{$user->password}}</td>
         <td>{{$user->role}}</td>
-<td>        <a href=""><i class="fa-solid fa-pen-to-square"></i></a>||<a href="{{route('delete-user',$user->id)}}" onclick="return confirm('Are you sure you want to delete this user?')"><i class="fa-solid fa-trash"></i></a>
+<td>        <a href="/deleteUser/{{$user->id}}">edit</a>||
+<a href="{{route('delete-user',$user->id)}}" onclick="return confirm('Are you sure you want to delete this user?')"><i class="fa-solid fa-trash"></i></a>
 </td>         
    </tr>
           </tbody>

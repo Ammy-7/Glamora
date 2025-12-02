@@ -1,756 +1,820 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <title>EShopper - Bootstrap Shop Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-
-    <!-- Favicon -->
-    <link href="user/img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="user/https://fonts.gstatic.com">
-    <link href="user/https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
-
-    <!-- Font Awesome -->
-    <link href="user/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="user/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="user/css/style.css" rel="stylesheet">
+<title>Colo Shop</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Colo Shop Template">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="user/styles/bootstrap4/bootstrap.min.css">
+<link href="user/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="user/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="user/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="user/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="user/styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="user/styles/responsive.css">
 </head>
 
 <body>
-    <!-- Topbar Start -->
-    <div class="container-fluid">
-        <div class="row bg-secondary py-2 px-xl-5">
-            <div class="col-lg-6 d-none d-lg-block">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-dark" href="">FAQs</a>
-                    <span class="text-muted px-2">|</span>
-                    <a class="text-dark" href="">Help</a>
-                    <span class="text-muted px-2">|</span>
-                    <a class="text-dark" href="">Support</a>
-                </div>
-            </div>
-            <div class="col-lg-6 text-center text-lg-right">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-dark px-2" href="">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="text-dark px-2" href="">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="text-dark px-2" href="">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a class="text-dark px-2" href="">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-dark pl-2" href="">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="row align-items-center py-3 px-xl-5">
-            <div class="col-lg-3 d-none d-lg-block">
-                <a href="" class="text-decoration-none">
-                    <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
-                </a>
-            </div>
-            <div class="col-lg-6 col-6 text-left">
-                <form action="">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for products">
-                        <div class="input-group-append">
-                            <span class="input-group-text bg-transparent text-primary">
-                                <i class="fa fa-search"></i>
-                            </span>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-lg-3 col-6 text-right">
-                <a href="" class="btn border">
-                    <i class="fas fa-heart text-primary"></i>
-                    <span class="badge">0</span>
-                </a>
-                <a href="" class="btn border">
-                    <i class="fas fa-shopping-cart text-primary"></i>
-                    <span class="badge">0</span>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
 
+<div class="super_container">
 
-    <!-- Navbar Start -->
-    <div class="container-fluid mb-5">
-        <div class="row border-top px-xl-5">
-            <div class="col-lg-3 d-none d-lg-block">
-                <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; margin-top: -1px; padding: 0 30px;">
-                    <h6 class="m-0">Categories</h6>
-                    <i class="fa fa-angle-down text-dark"></i>
-                </a>
-                <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
-                    <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link" data-toggle="dropdown">Dresses <i class="fa fa-angle-down float-right mt-1"></i></a>
-                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                                <a href="" class="dropdown-item">Men's Dresses</a>
-                                <a href="" class="dropdown-item">Women's Dresses</a>
-                                <a href="" class="dropdown-item">Baby's Dresses</a>
-                            </div>
-                        </div>
-                        <a href="" class="nav-item nav-link">Shirts</a>
-                        <a href="" class="nav-item nav-link">Jeans</a>
-                        <a href="" class="nav-item nav-link">Swimwear</a>
-                        <a href="" class="nav-item nav-link">Sleepwear</a>
-                        <a href="" class="nav-item nav-link">Sportswear</a>
-                        <a href="" class="nav-item nav-link">Jumpsuits</a>
-                        <a href="" class="nav-item nav-link">Blazers</a>
-                        <a href="" class="nav-item nav-link">Jackets</a>
-                        <a href="" class="nav-item nav-link">Shoes</a>
-                    </div>
-                </nav>
-            </div>
-            <div class="col-lg-9">
-                <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
-                    <a href="" class="text-decoration-none d-block d-lg-none">
-                        <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
-                    </a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                        <div class="navbar-nav mr-auto py-0">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <a href="shop.html" class="nav-item nav-link">Shop</a>
-                            <a href="detail.html" class="nav-item nav-link">Shop Detail</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="cart.html" class="dropdown-item">Shopping Cart</a>
-                                    <a href="checkout.html" class="dropdown-item">Checkout</a>
-                                </div>
-                            </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
-                        </div>
-                        <div class="navbar-nav ml-auto py-0">
-                            <a href="{{route('login')}}" class="nav-item nav-link">Login</a>
-                            <a href="{{route('Register')}}" class="nav-item nav-link">Register</a>
-                        </div>
-                    </div>
-                </nav>
-                <div id="header-carousel" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" style="height: 410px;">
-                            <img class="img-fluid" src="img/carousel-1.jpg" alt="Image">
-                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div class="p-3" style="max-width: 700px;">
-                                    <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>
-                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">Fashionable Dress</h3>
-                                    <a href="" class="btn btn-light py-2 px-3">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item" style="height: 410px;">
-                            <img class="img-fluid" src="img/carousel-2.jpg" alt="Image">
-                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div class="p-3" style="max-width: 700px;">
-                                    <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>
-                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">Reasonable Price</h3>
-                                    <a href="" class="btn btn-light py-2 px-3">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
-                        <div class="btn btn-dark" style="width: 45px; height: 45px;">
-                            <span class="carousel-control-prev-icon mb-n2"></span>
-                        </div>
-                    </a>
-                    <a class="carousel-control-next" href="#header-carousel" data-slide="next">
-                        <div class="btn btn-dark" style="width: 45px; height: 45px;">
-                            <span class="carousel-control-next-icon mb-n2"></span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Navbar End -->
+	<!-- Header -->
 
+	<header class="header trans_300">
 
-    <!-- Featured Start -->
-    <div class="container-fluid pt-5">
-        <div class="row px-xl-5 pb-3">
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                    <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
-                    <h5 class="font-weight-semi-bold m-0">Quality Product</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                    <h1 class="fa fa-shipping-fast text-primary m-0 mr-2"></h1>
-                    <h5 class="font-weight-semi-bold m-0">Free Shipping</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                    <h1 class="fas fa-exchange-alt text-primary m-0 mr-3"></h1>
-                    <h5 class="font-weight-semi-bold m-0">14-Day Return</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                    <h1 class="fa fa-phone-volume text-primary m-0 mr-3"></h1>
-                    <h5 class="font-weight-semi-bold m-0">24/7 Support</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Featured End -->
+		<!-- Top Navigation -->
 
+		<div class="top_nav">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="top_nav_left">free shipping on all u.s orders over $50</div>
+					</div>
+					<div class="col-md-6 text-right">
+						<div class="top_nav_right">
+							<ul class="top_nav_menu">
 
-    <!-- Categories Start -->
-    <div class="container-fluid pt-5">
-        <div class="row px-xl-5 pb-3">
-            <div class="col-lg-4 col-md-6 pb-1">
-                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
-                    <p class="text-right">15 Products</p>
-                    <a href="" class="cat-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="img/cat-1.jpg" alt="">
-                    </a>
-                    <h5 class="font-weight-semi-bold m-0">Men's dresses</h5>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 pb-1">
-                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
-                    <p class="text-right">15 Products</p>
-                    <a href="" class="cat-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="img/cat-2.jpg" alt="">
-                    </a>
-                    <h5 class="font-weight-semi-bold m-0">Women's dresses</h5>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 pb-1">
-                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
-                    <p class="text-right">15 Products</p>
-                    <a href="" class="cat-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="img/cat-3.jpg" alt="">
-                    </a>
-                    <h5 class="font-weight-semi-bold m-0">Baby's dresses</h5>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 pb-1">
-                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
-                    <p class="text-right">15 Products</p>
-                    <a href="" class="cat-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="img/cat-4.jpg" alt="">
-                    </a>
-                    <h5 class="font-weight-semi-bold m-0">Accerssories</h5>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 pb-1">
-                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
-                    <p class="text-right">15 Products</p>
-                    <a href="" class="cat-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="img/cat-5.jpg" alt="">
-                    </a>
-                    <h5 class="font-weight-semi-bold m-0">Bags</h5>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 pb-1">
-                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
-                    <p class="text-right">15 Products</p>
-                    <a href="" class="cat-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="img/cat-6.jpg" alt="">
-                    </a>
-                    <h5 class="font-weight-semi-bold m-0">Shoes</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Categories End -->
+								<!-- Currency / Language / My Account -->
 
+								<li class="currency">
+									<a href="#">
+										usd
+										<i class="fa fa-angle-down"></i>
+									</a>
+									<ul class="currency_selection">
+										<li><a href="#">cad</a></li>
+										<li><a href="#">aud</a></li>
+										<li><a href="#">eur</a></li>
+										<li><a href="#">gbp</a></li>
+									</ul>
+								</li>
+								<li class="language">
+									<a href="#">
+										English
+										<i class="fa fa-angle-down"></i>
+									</a>
+									<ul class="language_selection">
+										<li><a href="#">French</a></li>
+										<li><a href="#">Italian</a></li>
+										<li><a href="#">German</a></li>
+										<li><a href="#">Spanish</a></li>
+									</ul>
+								</li>
+								<li class="account">
+									<a href="#">
+										My Account
+										<i class="fa fa-angle-down"></i>
+									</a>
+									<ul class="account_selection">
+										<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
+										<li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <!-- Offer Start -->
-    <div class="container-fluid offer pt-5">
-        <div class="row px-xl-5">
-            <div class="col-md-6 pb-4">
-                <div class="position-relative bg-secondary text-center text-md-right text-white mb-2 py-5 px-5">
-                    <img src="img/offer-1.png" alt="">
-                    <div class="position-relative" style="z-index: 1;">
-                        <h5 class="text-uppercase text-primary mb-3">20% off the all order</h5>
-                        <h1 class="mb-4 font-weight-semi-bold">Spring Collection</h1>
-                        <a href="" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 pb-4">
-                <div class="position-relative bg-secondary text-center text-md-left text-white mb-2 py-5 px-5">
-                    <img src="img/offer-2.png" alt="">
-                    <div class="position-relative" style="z-index: 1;">
-                        <h5 class="text-uppercase text-primary mb-3">20% off the all order</h5>
-                        <h1 class="mb-4 font-weight-semi-bold">Winter Collection</h1>
-                        <a href="" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Offer End -->
+		<!-- Main Navigation -->
 
+		<div class="main_nav_container">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-right">
+						<div class="logo_container">
+							<a href="#">colo<span>shop</span></a>
+						</div>
+						<nav class="navbar">
+							<ul class="navbar_menu">
+								<li><a href="#">home</a></li>
+								<li><a href="#">shop</a></li>
+								<li><a href="#">promotion</a></li>
+								<li><a href="#">pages</a></li>
+								<li><a href="#">blog</a></li>
+								<li><a href="contact.html">contact</a></li>
+							</ul>
+							<ul class="navbar_user">
+								<li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+								<li class="checkout">
+									<a href="#">
+										<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+										<span id="checkout_items" class="checkout_items">2</span>
+									</a>
+								</li>
+							</ul>
+							<div class="hamburger_container">
+								<i class="fa fa-bars" aria-hidden="true"></i>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <!-- Products Start -->
-    <div class="container-fluid pt-5">
-        <div class="text-center mb-4">
-            <h2 class="section-title px-5"><span class="px-2">Trandy Products</span></h2>
-        </div>
-        <div class="row px-xl-5 pb-3">
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="card product-item border-0 mb-4">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-1.jpg" alt="">
-                    </div>
-                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                        <div class="d-flex justify-content-center">
-                            <h6>$123.00</h6><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="card product-item border-0 mb-4">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-2.jpg" alt="">
-                    </div>
-                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                        <div class="d-flex justify-content-center">
-                            <h6>$123.00</h6><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="card product-item border-0 mb-4">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-3.jpg" alt="">
-                    </div>
-                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                        <div class="d-flex justify-content-center">
-                            <h6>$123.00</h6><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="card product-item border-0 mb-4">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-4.jpg" alt="">
-                    </div>
-                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                        <div class="d-flex justify-content-center">
-                            <h6>$123.00</h6><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="card product-item border-0 mb-4">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-5.jpg" alt="">
-                    </div>
-                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                        <div class="d-flex justify-content-center">
-                            <h6>$123.00</h6><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="card product-item border-0 mb-4">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-6.jpg" alt="">
-                    </div>
-                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                        <div class="d-flex justify-content-center">
-                            <h6>$123.00</h6><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="card product-item border-0 mb-4">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-7.jpg" alt="">
-                    </div>
-                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                        <div class="d-flex justify-content-center">
-                            <h6>$123.00</h6><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="card product-item border-0 mb-4">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-8.jpg" alt="">
-                    </div>
-                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                        <div class="d-flex justify-content-center">
-                            <h6>$123.00</h6><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Products End -->
+	</header>
 
+	<div class="fs_menu_overlay"></div>
+	<div class="hamburger_menu">
+		<div class="hamburger_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+		<div class="hamburger_menu_content text-right">
+			<ul class="menu_top_nav">
+				<li class="menu_item has-children">
+					<a href="#">
+						usd
+						<i class="fa fa-angle-down"></i>
+					</a>
+					<ul class="menu_selection">
+						<li><a href="#">cad</a></li>
+						<li><a href="#">aud</a></li>
+						<li><a href="#">eur</a></li>
+						<li><a href="#">gbp</a></li>
+					</ul>
+				</li>
+				<li class="menu_item has-children">
+					<a href="#">
+						English
+						<i class="fa fa-angle-down"></i>
+					</a>
+					<ul class="menu_selection">
+						<li><a href="#">French</a></li>
+						<li><a href="#">Italian</a></li>
+						<li><a href="#">German</a></li>
+						<li><a href="#">Spanish</a></li>
+					</ul>
+				</li>
+				<li class="menu_item has-children">
+					<a href="#">
+						My Account
+						<i class="fa fa-angle-down"></i>
+					</a>
+					<ul class="menu_selection">
+						<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
+						<li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
+					</ul>
+				</li>
+				<li class="menu_item"><a href="#">home</a></li>
+				<li class="menu_item"><a href="#">shop</a></li>
+				<li class="menu_item"><a href="#">promotion</a></li>
+				<li class="menu_item"><a href="#">pages</a></li>
+				<li class="menu_item"><a href="#">blog</a></li>
+				<li class="menu_item"><a href="#">contact</a></li>
+			</ul>
+		</div>
+	</div>
 
-    <!-- Subscribe Start -->
-    <div class="container-fluid bg-secondary my-5">
-        <div class="row justify-content-md-center py-5 px-xl-5">
-            <div class="col-md-6 col-12 py-5">
-                <div class="text-center mb-2 pb-2">
-                    <h2 class="section-title px-5 mb-3"><span class="bg-secondary px-2">Stay Updated</span></h2>
-                    <p>Amet lorem at rebum amet dolores. Elitr lorem dolor sed amet diam labore at justo ipsum eirmod duo labore labore.</p>
-                </div>
-                <form action="">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-white p-4" placeholder="Email Goes Here">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary px-4">Subscribe</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- Subscribe End -->
+	<!-- Slider -->
 
+	<div class="main_slider" style="background-image:url(user/images/slider_1.jpg)">
+		<div class="container fill_height">
+			<div class="row align-items-center fill_height">
+				<div class="col">
+					<div class="main_slider_content">
+						<h6>Spring / Summer Collection 2017</h6>
+						<h1>Get up to 30% Off New Arrivals</h1>
+						<div class="red_button shop_now_button"><a href="#">shop now</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <!-- Products Start -->
-    <div class="container-fluid pt-5">
-        <div class="text-center mb-4">
-            <h2 class="section-title px-5"><span class="px-2">Just Arrived</span></h2>
-        </div>
-        <div class="row px-xl-5 pb-3">
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="card product-item border-0 mb-4">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-1.jpg" alt="">
-                    </div>
-                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                        <div class="d-flex justify-content-center">
-                            <h6>$123.00</h6><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="card product-item border-0 mb-4">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-2.jpg" alt="">
-                    </div>
-                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                        <div class="d-flex justify-content-center">
-                            <h6>$123.00</h6><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="card product-item border-0 mb-4">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-3.jpg" alt="">
-                    </div>
-                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                        <div class="d-flex justify-content-center">
-                            <h6>$123.00</h6><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="card product-item border-0 mb-4">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-4.jpg" alt="">
-                    </div>
-                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                        <div class="d-flex justify-content-center">
-                            <h6>$123.00</h6><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="card product-item border-0 mb-4">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-5.jpg" alt="">
-                    </div>
-                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                        <div class="d-flex justify-content-center">
-                            <h6>$123.00</h6><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="card product-item border-0 mb-4">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-6.jpg" alt="">
-                    </div>
-                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                        <div class="d-flex justify-content-center">
-                            <h6>$123.00</h6><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="card product-item border-0 mb-4">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-7.jpg" alt="">
-                    </div>
-                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                        <div class="d-flex justify-content-center">
-                            <h6>$123.00</h6><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="card product-item border-0 mb-4">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-8.jpg" alt="">
-                    </div>
-                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                        <div class="d-flex justify-content-center">
-                            <h6>$123.00</h6><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Products End -->
+	<!-- Banner -->
 
+	<div class="banner">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="banner_item align-items-center" style="background-image:url(user/images/banner_1.jpg)">
+						<div class="banner_category">
+							<a href="categories.html">women's</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="banner_item align-items-center" style="background-image:url(user/images/banner_2.jpg)">
+						<div class="banner_category">
+							<a href="categories.html">accessories's</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="banner_item align-items-center" style="background-image:url(user/images/banner_3.jpg)">
+						<div class="banner_category">
+							<a href="categories.html">men's</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <!-- Vendor Start -->
-    <div class="container-fluid py-5">
-        <div class="row px-xl-5">
-            <div class="col">
-                <div class="owl-carousel vendor-carousel">
-                    <div class="user/vendor-item border p-4">
-                        <img src="user/mg/vendor-1.jpg" alt="">
-                    </div>
-                    <div class="user/vendor-item border p-4">
-                        <img src="user/img/vendor-2.jpg" alt="">
-                    </div>
-                    <div class="user/vendor-item border p-4">
-                        <img src="user/img/vendor-3.jpg" alt="">
-                    </div>
-                    <div class="user/vendor-item border p-4">
-                        <img src="user/img/vendor-4.jpg" alt="">
-                    </div>
-                    <div class="user/vendor-item border p-4">
-                        <img src="user/img/vendor-5.jpg" alt="">
-                    </div>
-                    <div class="user/vendor-item border p-4">
-                        <img src="user/img/vendor-6.jpg" alt="">
-                    </div>
-                    <div class="user/vendor-item border p-4">
-                        <img src="user/img/vendor-7.jpg" alt="">
-                    </div>
-                    <div class="user/vendor-item border p-4">
-                        <img src="user/img/vendor-8.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Vendor End -->
+	<!-- New Arrivals -->
 
+	<div class="new_arrivals">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_title new_arrivals_title">
+						<h2>New Arrivals</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row align-items-center">
+				<div class="col text-center">
+					<div class="new_arrivals_sorting">
+						<ul class="arrivals_grid_sorting clearfix button-group filters-button-group">
+							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center active is-checked" data-filter="*">all</li>
+							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".women">women's</li>
+							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".accessories">accessories</li>
+							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".men">men's</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="product-grid" data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }'>
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-secondary text-dark mt-5 pt-5">
-        <div class="row px-xl-5 pt-5">
-            <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
-                <a href="" class="text-decoration-none">
-                    <h1 class="mb-4 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border border-white px-3 mr-1">E</span>Shopper</h1>
-                </a>
-                <p>Dolore erat dolor sit lorem vero amet. Sed sit lorem magna, ipsum no sit erat lorem et magna ipsum dolore amet erat.</p>
-                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>123 Street, New York, USA</p>
-                <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>info@example.com</p>
-                <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+012 345 67890</p>
-            </div>
-            <div class="col-lg-8 col-md-12">
-                <div class="row">
-                    <div class="col-md-4 mb-5">
-                        <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                            <a class="text-dark mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
-                            <a class="text-dark mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
-                            <a class="text-dark mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
-                            <a class="text-dark mb-2" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
-                            <a class="text-dark" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-5">
-                        <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                            <a class="text-dark mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
-                            <a class="text-dark mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
-                            <a class="text-dark mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
-                            <a class="text-dark mb-2" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
-                            <a class="text-dark" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-5">
-                        <h5 class="font-weight-bold text-dark mb-4">Newsletter</h5>
-                        <form action="">
-                            <div class="form-group">
-                                <input type="text" class="form-control border-0 py-4" placeholder="Your Name" required="required" />
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control border-0 py-4" placeholder="Your Email"
-                                    required="required" />
-                            </div>
-                            <div>
-                                <button class="btn btn-primary btn-block border-0 py-3" type="submit">Subscribe Now</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row border-top border-light mx-xl-5 py-4">
-            <div class="col-md-6 px-xl-0">
-                <p class="mb-md-0 text-center text-md-left text-dark">
-                    &copy; <a class="text-dark font-weight-semi-bold" href="#">Your Site Name</a>. All Rights Reserved. Designed
-                    by
-                    <a class="text-dark font-weight-semi-bold" href="user/https://htmlcodex.com">HTML Codex</a><br>
-                    Distributed By <a href="user/https://themewagon.com" target="_blank">ThemeWagon</a>
-                </p>
-            </div>
-            <div class="col-md-6 px-xl-0 text-center text-md-right">
-                <img class="img-fluid" src="img/payments.png" alt="">
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
+						<!-- Product 1 -->
 
+						<div class="product-item men">
+							<div class="product discount product_filter">
+								<div class="product_image">
+									<img src="user/images/product_1.png" alt="">
+								</div>
+								<div class="favorite favorite_left"></div>
+								<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
+								<div class="product_info">
+									<h6 class="product_name"><a href="single.html">Fujifilm X100T 16 MP Digital Camera (Silver)</a></h6>
+									<div class="product_price">$520.00<span>$590.00</span></div>
+								</div>
+							</div>
+							<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+						</div>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+						<!-- Product 2 -->
 
+						<div class="product-item women">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="user/images/product_2.png" alt="">
+								</div>
+								<div class="favorite"></div>
+								<div class="product_bubble product_bubble_left product_bubble_green d-flex flex-column align-items-center"><span>new</span></div>
+								<div class="product_info">
+									<h6 class="product_name"><a href="single.html">Samsung CF591 Series Curved 27-Inch FHD Monitor</a></h6>
+									<div class="product_price">$610.00</div>
+								</div>
+							</div>
+							<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+						</div>
 
-    <!-- JavaScript Libraries -->
-    <script src="user/https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="user/https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="user/lib/easing/easing.min.js"></script>
-    <script src="user/lib/owlcarousel/owl.carousel.min.js"></script>
+						<!-- Product 3 -->
 
-    <!-- Contact Javascript File -->
-    <script src="user/mail/jqBootstrapValidation.min.js"></script>
-    <script src="user/mail/contact.js"></script>
+						<div class="product-item women">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="user/images/product_3.png" alt="">
+								</div>
+								<div class="favorite"></div>
+								<div class="product_info">
+									<h6 class="product_name"><a href="single.html">Blue Yeti USB Microphone Blackout Edition</a></h6>
+									<div class="product_price">$120.00</div>
+								</div>
+							</div>
+							<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+						</div>
 
-    <!-- Template Javascript -->
-    <script src="user/js/main.js"></script>
+						<!-- Product 4 -->
+
+						<div class="product-item accessories">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="user/images/product_4.png" alt="">
+								</div>
+								<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>sale</span></div>
+								<div class="favorite favorite_left"></div>
+								<div class="product_info">
+									<h6 class="product_name"><a href="single.html">DYMO LabelWriter 450 Turbo Thermal Label Printer</a></h6>
+									<div class="product_price">$410.00</div>
+								</div>
+							</div>
+							<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+						</div>
+
+						<!-- Product 5 -->
+
+						<div class="product-item women men">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="user/images/product_5.png" alt="">
+								</div>
+								<div class="favorite"></div>
+								<div class="product_info">
+									<h6 class="product_name"><a href="single.html">Pryma Headphones, Rose Gold & Grey</a></h6>
+									<div class="product_price">$180.00</div>
+								</div>
+							</div>
+							<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+						</div>
+
+						<!-- Product 6 -->
+
+						<div class="product-item accessories">
+							<div class="product discount product_filter">
+								<div class="product_image">
+									<img src="user/images/product_6.png" alt="">
+								</div>
+								<div class="favorite favorite_left"></div>
+								<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
+								<div class="product_info">
+									<h6 class="product_name"><a href="#single.html">Fujifilm X100T 16 MP Digital Camera (Silver)</a></h6>
+									<div class="product_price">$520.00<span>$590.00</span></div>
+								</div>
+							</div>
+							<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+						</div>
+
+						<!-- Product 7 -->
+
+						<div class="product-item women">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="user/images/product_7.png" alt="">
+								</div>
+								<div class="favorite"></div>
+								<div class="product_info">
+									<h6 class="product_name"><a href="single.html">Samsung CF591 Series Curved 27-Inch FHD Monitor</a></h6>
+									<div class="product_price">$610.00</div>
+								</div>
+							</div>
+							<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+						</div>
+
+						<!-- Product 8 -->
+
+						<div class="product-item accessories">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="user/images/product_8.png" alt="">
+								</div>
+								<div class="favorite"></div>
+								<div class="product_info">
+									<h6 class="product_name"><a href="single.html">Blue Yeti USB Microphone Blackout Edition</a></h6>
+									<div class="product_price">$120.00</div>
+								</div>
+							</div>
+							<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+						</div>
+
+						<!-- Product 9 -->
+
+						<div class="product-item men">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="user/images/product_9.png" alt="">
+								</div>
+								<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>sale</span></div>
+								<div class="favorite favorite_left"></div>
+								<div class="product_info">
+									<h6 class="product_name"><a href="single.html">DYMO LabelWriter 450 Turbo Thermal Label Printer</a></h6>
+									<div class="product_price">$410.00</div>
+								</div>
+							</div>
+							<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+						</div>
+
+						<!-- Product 10 -->
+
+						<div class="product-item men">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="user/images/product_10.png" alt="">
+								</div>
+								<div class="favorite"></div>
+								<div class="product_info">
+									<h6 class="product_name"><a href="single.html">Pryma Headphones, Rose Gold & Grey</a></h6>
+									<div class="product_price">$180.00</div>
+								</div>
+							</div>
+							<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Deal of the week -->
+
+	<div class="deal_ofthe_week">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6">
+					<div class="deal_ofthe_week_img">
+			user/			<img src="user/images/deal_ofthe_week.png" alt="">
+					</div>
+				</div>
+				<div class="col-lg-6 text-right deal_ofthe_week_col">
+					<div class="deal_ofthe_week_content d-flex flex-column align-items-center float-right">
+						<div class="section_title">
+							<h2>Deal Of The Week</h2>
+						</div>
+						<ul class="timer">
+							<li class="d-inline-flex flex-column justify-content-center align-items-center">
+								<div id="day" class="timer_num">03</div>
+								<div class="timer_unit">Day</div>
+							</li>
+							<li class="d-inline-flex flex-column justify-content-center align-items-center">
+								<div id="hour" class="timer_num">15</div>
+								<div class="timer_unit">Hours</div>
+							</li>
+							<li class="d-inline-flex flex-column justify-content-center align-items-center">
+								<div id="minute" class="timer_num">45</div>
+								<div class="timer_unit">Mins</div>
+							</li>
+							<li class="d-inline-flex flex-column justify-content-center align-items-center">
+								<div id="second" class="timer_num">23</div>
+								<div class="timer_unit">Sec</div>
+							</li>
+						</ul>
+						<div class="red_button deal_ofthe_week_button"><a href="#">shop now</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Best Sellers -->
+
+	<div class="best_sellers">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_title new_arrivals_title">
+						<h2>Best Sellers</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="product_slider_container">
+						<div class="owl-carousel owl-theme product_slider">
+
+							<!-- Slide 1 -->
+
+							<div class="owl-item product_slider_item">
+								<div class="product-item">
+									<div class="product discount">
+										<div class="product_image">
+											<img src="user/images/product_1.png" alt="">
+										</div>
+										<div class="favorite favorite_left"></div>
+										<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
+										<div class="product_info">
+											<h6 class="product_name"><a href="single.html">Fujifilm X100T 16 MP Digital Camera (Silver)</a></h6>
+											<div class="product_price">$520.00<span>$590.00</span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 2 -->
+
+							<div class="owl-item product_slider_item">
+								<div class="product-item women">
+									<div class="product">
+										<div class="product_image">
+											<img src="user/images/product_2.png" alt="">
+										</div>
+										<div class="favorite"></div>
+										<div class="product_bubble product_bubble_left product_bubble_green d-flex flex-column align-items-center"><span>new</span></div>
+										<div class="product_info">
+											<h6 class="product_name"><a href="single.html">Samsung CF591 Series Curved 27-Inch FHD Monitor</a></h6>
+											<div class="product_price">$610.00</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 3 -->
+
+							<div class="owl-item product_slider_item">
+								<div class="product-item women">
+									<div class="product">
+										<div class="product_image">
+											<img src="user/images/product_3.png" alt="">
+										</div>
+										<div class="favorite"></div>
+										<div class="product_info">
+											<h6 class="product_name"><a href="single.html">Blue Yeti USB Microphone Blackout Edition</a></h6>
+											<div class="product_price">$120.00</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 4 -->
+
+							<div class="owl-item product_slider_item">
+								<div class="product-item accessories">
+									<div class="product">
+										<div class="product_image">
+											<img src="user/images/product_4.png" alt="">
+										</div>
+										<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>sale</span></div>
+										<div class="favorite favorite_left"></div>
+										<div class="product_info">
+											<h6 class="product_name"><a href="single.html">DYMO LabelWriter 450 Turbo Thermal Label Printer</a></h6>
+											<div class="product_price">$410.00</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 5 -->
+
+							<div class="owl-item product_slider_item">
+								<div class="product-item women men">
+									<div class="product">
+										<div class="product_image">
+											<img src="user/images/product_5.png" alt="">
+										</div>
+										<div class="favorite"></div>
+										<div class="product_info">
+											<h6 class="product_name"><a href="single.html">Pryma Headphones, Rose Gold & Grey</a></h6>
+											<div class="product_price">$180.00</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 6 -->
+
+							<div class="owl-item product_slider_item">
+								<div class="product-item accessories">
+									<div class="product discount">
+										<div class="product_image">
+											<img src="user/images/product_6.png" alt="">
+										</div>
+										<div class="favorite favorite_left"></div>
+										<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
+										<div class="product_info">
+											<h6 class="product_name"><a href="single.html">Fujifilm X100T 16 MP Digital Camera (Silver)</a></h6>
+											<div class="product_price">$520.00<span>$590.00</span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 7 -->
+
+							<div class="owl-item product_slider_item">
+								<div class="product-item women">
+									<div class="product">
+										<div class="product_image">
+											<img src="user/images/product_7.png" alt="">
+										</div>
+										<div class="favorite"></div>
+										<div class="product_info">
+											<h6 class="product_name"><a href="single.html">Samsung CF591 Series Curved 27-Inch FHD Monitor</a></h6>
+											<div class="product_price">$610.00</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 8 -->
+
+							<div class="owl-item product_slider_item">
+								<div class="product-item accessories">
+									<div class="product">
+										<div class="product_image">
+											<img src="user/images/product_8.png" alt="">
+										</div>
+										<div class="favorite"></div>
+										<div class="product_info">
+											<h6 class="product_name"><a href="single.html">Blue Yeti USB Microphone Blackout Edition</a></h6>
+											<div class="product_price">$120.00</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 9 -->
+
+							<div class="owl-item product_slider_item">
+								<div class="product-item men">
+									<div class="product">
+										<div class="product_image">
+											<img src="user/images/product_9.png" alt="">
+										</div>
+										<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>sale</span></div>
+										<div class="favorite favorite_left"></div>
+										<div class="product_info">
+											<h6 class="product_name"><a href="single.html">DYMO LabelWriter 450 Turbo Thermal Label Printer</a></h6>
+											<div class="product_price">$410.00</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 10 -->
+
+							<div class="owl-item product_slider_item">
+								<div class="product-item men">
+									<div class="product">
+										<div class="product_image">
+											<img src="user/images/product_10.png" alt="">
+										</div>
+										<div class="favorite"></div>
+										<div class="product_info">
+											<h6 class="product_name"><a href="single.html">Pryma Headphones, Rose Gold & Grey</a></h6>
+											<div class="product_price">$180.00</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Slider Navigation -->
+
+						<div class="product_slider_nav_left product_slider_nav d-flex align-items-center justify-content-center flex-column">
+							<i class="fa fa-chevron-left" aria-hidden="true"></i>
+						</div>
+						<div class="product_slider_nav_right product_slider_nav d-flex align-items-center justify-content-center flex-column">
+							<i class="fa fa-chevron-right" aria-hidden="true"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Benefit -->
+
+	<div class="benefit">
+		<div class="container">
+			<div class="row benefit_row">
+				<div class="col-lg-3 benefit_col">
+					<div class="benefit_item d-flex flex-row align-items-center">
+						<div class="benefit_icon"><i class="fa fa-truck" aria-hidden="true"></i></div>
+						<div class="benefit_content">
+							<h6>free shipping</h6>
+							<p>Suffered Alteration in Some Form</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 benefit_col">
+					<div class="benefit_item d-flex flex-row align-items-center">
+						<div class="benefit_icon"><i class="fa fa-money" aria-hidden="true"></i></div>
+						<div class="benefit_content">
+							<h6>cach on delivery</h6>
+							<p>The Internet Tend To Repeat</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 benefit_col">
+					<div class="benefit_item d-flex flex-row align-items-center">
+						<div class="benefit_icon"><i class="fa fa-undo" aria-hidden="true"></i></div>
+						<div class="benefit_content">
+							<h6>45 days return</h6>
+							<p>Making it Look Like Readable</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 benefit_col">
+					<div class="benefit_item d-flex flex-row align-items-center">
+						<div class="benefit_icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+						<div class="benefit_content">
+							<h6>opening all week</h6>
+							<p>8AM - 09PM</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Blogs -->
+
+	<div class="blogs">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_title">
+						<h2>Latest Blogs</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row blogs_container">
+				<div class="col-lg-4 blog_item_col">
+					<div class="blog_item">
+						<div class="blog_background" style="background-image:url(user/images/blog_1.jpg)"></div>
+						<div class="blog_content d-flex flex-column align-items-center justify-content-center text-center">
+							<h4 class="blog_title">Here are the trends I see coming this fall</h4>
+							<span class="blog_meta">by admin | dec 01, 2017</span>
+							<a class="blog_more" href="#">Read more</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 blog_item_col">
+					<div class="blog_item">
+						<div class="blog_background" style="background-image:url(user/images/blog_2.jpg)"></div>
+						<div class="blog_content d-flex flex-column align-items-center justify-content-center text-center">
+							<h4 class="blog_title">Here are the trends I see coming this fall</h4>
+							<span class="blog_meta">by admin | dec 01, 2017</span>
+							<a class="blog_more" href="#">Read more</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 blog_item_col">
+					<div class="blog_item">
+						<div class="blog_background" style="background-image:url(user/images/blog_3.jpg)"></div>
+						<div class="blog_content d-flex flex-column align-items-center justify-content-center text-center">
+							<h4 class="blog_title">Here are the trends I see coming this fall</h4>
+							<span class="blog_meta">by admin | dec 01, 2017</span>
+							<a class="blog_more" href="#">Read more</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Newsletter -->
+
+	<div class="newsletter">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="newsletter_text d-flex flex-column justify-content-center align-items-lg-start align-items-md-center text-center">
+						<h4>Newsletter</h4>
+						<p>Subscribe to our newsletter and get 20% off your first purchase</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<form action="post">
+						<div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-lg-end justify-content-center">
+							<input id="newsletter_email" type="email" placeholder="Your email" required="required" data-error="Valid email is required.">
+							<button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">subscribe</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="footer_nav_container d-flex flex-sm-row flex-column align-items-center justify-content-lg-start justify-content-center text-center">
+						<ul class="footer_nav">
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">FAQs</a></li>
+							<li><a href="contact.html">Contact us</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="footer_social d-flex flex-row align-items-center justify-content-lg-end justify-content-center">
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="footer_nav_container">
+						<div class="cr">©2018 All Rights Reserverd. Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#">Colorlib</a> &amp; distributed by <a href="https://themewagon.com">ThemeWagon</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</div>
+
+<script src="user/js/jquery-3.2.1.min.js"></script>
+<script src="user/styles/bootstrap4/popper.js"></script>
+<script src="user/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="user/plugins/Isotope/isotope.pkgd.min.js"></script>
+<script src="user/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="user/plugins/easing/easing.js"></script>
+<script src="user/js/custom.js"></script>
 </body>
 
 </html>
