@@ -37,3 +37,6 @@ Route::get('/deleteUser{id}',[authController::class,'delete'])->name('delete-use
 
 //update user
 Route::get('/userupdate/{id}',[authController::class,"edituser"]);
+
+//Dasboard
+Route::view('/dashboard', 'admin.dashboard')->name('dashboard');
