@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\authController;
+use App\Http\Controllers\categoryController;
 use App\Http\Middleware\validation;
 use Illuminate\Support\Facades\Route;
 
@@ -35,5 +36,14 @@ Route::get('/Allusers',[authController::class,'fetch'])->name('fetch-user');
 //deleteuser
 Route::get('/deleteUser{id}',[authController::class,'delete'])->name('delete-user');
 
-//update user
-Route::get('/userupdate/{id}',[authController::class,"edituser"]);
+// Edit user page
+Route::get('/edituser/{id}', [authController::class, 'edit'])->name('edit');
+Route::view('/update','Admin.updateuser')->name('updatePage');
+// Update user form submit 
+Route::post('/userupdate/{id}', [authController::class, 'update'])->name('user.update');
+
+//categories
+Route::view('/categories','Admin.add-category')->name('cate');
+Route::post('/addcategory',[categoryController::class,'add'])->name('addcate');
+//allcategories
+Route::view('/allcategories','Admin.allcategory')->name('all_cate');

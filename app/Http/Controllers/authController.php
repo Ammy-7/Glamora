@@ -65,24 +65,29 @@ public function delete($id){
     $dlt=User::destroy($id);
 return redirect()->route('fetch-user');
 }
+//edituser
+public function edit($id){
+    $data=User::find($id);
+    return view('Admin.updateuser',compact('data'));
+}
+//update users
 
+public function update(Request $U_req,$id){
+$data=User::find($id);
 
-
-
-public function edituser($id){
-    return $id;
+$data->name=$U_req->name;
+$data->email=$U_req->email;
+$data->role=$U_req->role;
+if($data->save()){
+    return redirect()->route('fetch-user')->with('success','user updated successfully....');
+}
+else{
+    return back()->with('error','user not updated!!!!');
+}
+}
 }
 
-public function updateuser(Request $req,$id ){
-$data=user::find($id);
-$myuser=new user();
-$myuser->name=$req->name;
-
-    return $id;
-}
 
 
 
 
-
-}

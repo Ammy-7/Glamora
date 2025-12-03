@@ -1,8 +1,13 @@
-{{-- @extends('admin.sidebar')
-@section('dashboard') --}}
+
 <div class="container">
     <div class="row mt-4">
         <div class="col-12  text-center">
+            @if (session('success'))
+                <div class="alert alert-success">
+{{session('success')}}</div>
+@endif
+
+        
             <h2 style="color: red">ALL USERS</h2>
             <table class="table table-hover mt-4">
                 <thead>
@@ -23,7 +28,7 @@
         <td>{{$user->email}}</td>
         <td>{{$user->password}}</td>
         <td>{{$user->role}}</td>
-<td>        <a href="/deleteUser/{{$user->id}}">edit</a>||
+<td>        <a href="{{route('edit',$user->id)}}">edit</a>||
 <a href="{{route('delete-user',$user->id)}}" onclick="return confirm('Are you sure you want to delete this user?')"><i class="fa-solid fa-trash"></i></a>
 </td>         
    </tr>
