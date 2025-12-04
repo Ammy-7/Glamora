@@ -18,31 +18,32 @@ Route::view('/RegisterPage', 'auth.register')->name('Register');
 
 //register data
 Route::post('/registerData' , [authController::class , "Register"])->name('R_Data');
+
 //loginPage
 Route::view('/login_page', 'auth.login')->name('login');
 Route::post('/logindata' , [authController::class , "login"])->name('l_Data');
 
 //logout
 Route::get('/logout' , [authController::class , "logout"])->name('logout');
+
 //Admin
-Route::view('/dashboard', 'Admin.dashboard')->name('admin')->middleware(validation::class);
-//users
-Route::view('/indexPage', 'user.index')->name('index');
+Route::view('/dashboard', 'Admin.dashboard')->name('admin'); //->middleware(validation::class);
 //sidebar
 Route::view('/sidebar','Admin.sidebar')->name('sidebar');
+
+//users
+Route::view('/indexPage', 'user.index')->name('index');
+
 // Allusers
 Route::get('/Allusers',[authController::class,'fetch'])->name('fetch-user');
 
 //deleteuser
 Route::get('/deleteUser{id}',[authController::class,'delete'])->name('delete-user');
 
-<<<<<<< HEAD
+
 //update user
 Route::get('/userupdate/{id}',[authController::class,"edituser"]);
 
-//Dasboard
-Route::view('/dashboard', 'admin.dashboard')->name('dashboard');
-=======
 // Edit user page
 Route::get('/edituser/{id}', [authController::class, 'edit'])->name('edit');
 Route::view('/update','Admin.updateuser')->name('updatePage');
@@ -54,4 +55,4 @@ Route::view('/categories','Admin.add-category')->name('cate');
 Route::post('/addcategory',[categoryController::class,'add'])->name('addcate');
 //allcategories
 Route::view('/allcategories','Admin.allcategory')->name('all_cate');
->>>>>>> 872c48092896202a6f4dc232c21683355869cdfd
+
