@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 use function Laravel\Prompts\error;
 
@@ -15,7 +16,7 @@ public function add(Request $req)
     $data = $req->validate([
         'catename' => 'required|string|unique:categories,name|max:255',
         'desc' => 'nullable|string',
-        'cateimage' => 'required|image|mimes:png,jpg,jpeg|max:2000'
+        'cateimage' => 'required|image|mimes:png,jpg,jpeg,AVIF file|max:2000'
     ]);
     $file=$req->file('cateimage')->store('images','public');
     $url=basename($file);
@@ -28,11 +29,59 @@ public function add(Request $req)
 
 
     if($category){
-        return redirect()->route('all_cate');
+        return redirect()->route('all-cate');
     }
     else{
         return back()->with('error','data not inserted!!!!');
     }
+
+}
+// fetch Category
+
+public function fetchCate(){
+    $cateData = Category::all();
+
+    return view('Admin.allcategory',compact('cateData'));
+}
+
+
+// delete Category
+
+public function delete_cate($id){
+    $dlt_cate=Category::destroy($id);
+return redirect()->route('all-cate');
+}
+
+// Edit Category
+
+public function editCate($id){
+    $data=Category::find($id);
+    return view('Admin.EditCategory',compact('data'));
+}
+
+// update Category
+
+public function cateupdate(Request $req , $id){
+    $category=Category::find($id);
+    $category->name=$req['catename'];
+    $category->desc=$req['desc'];
+    if($req->hasFile('cateimage')){
+        $oldurl=storage_path('app/public/images/'.$category->image);
+        if(File::exists($oldurl)){
+            File::delete($oldurl);
+        }
+ $file=$req->file('cateimage')->store('images','public');
+    $url=basename($file);
+    $category->image=$url;
+     $category->save();
+     return redirect()->route('all-cate')->with('successfull','Category updated successfully...');
+    }
+  else{
+      $category->save();
+      return redirect()->route('all-cate')->with('successfull','Category updated successfully...');
+    }
+
+  
 
 }
 }

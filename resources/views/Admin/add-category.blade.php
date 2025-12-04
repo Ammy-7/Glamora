@@ -21,7 +21,7 @@
             <div class="col-4">
         </div>
         <div class="col-4">
-            <form action="{{route('addcate')}}" method="post" enctype="multipart/form-data">
+            <form action="{{route('add-cate')}}" method="post" enctype="multipart/form-data">
                 @csrf
 <input class="form-control mt-4" type="text" placeholder="Enter name" name="catename">
 @error('catename')

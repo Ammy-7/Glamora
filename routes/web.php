@@ -41,8 +41,6 @@ Route::get('/Allusers',[authController::class,'fetch'])->name('fetch-user');
 Route::get('/deleteUser{id}',[authController::class,'delete'])->name('delete-user');
 
 
-//update user
-Route::get('/userupdate/{id}',[authController::class,"edituser"]);
 
 // Edit user page
 Route::get('/edituser/{id}', [authController::class, 'edit'])->name('edit');
@@ -52,7 +50,14 @@ Route::post('/userupdate/{id}', [authController::class, 'update'])->name('user.u
 
 //categories
 Route::view('/categories','Admin.add-category')->name('cate');
-Route::post('/addcategory',[categoryController::class,'add'])->name('addcate');
-//allcategories
-Route::view('/allcategories','Admin.allcategory')->name('all_cate');
+Route::post('/addcategory',[categoryController::class,'add'])->name('add-cate');
+// All categories
+Route::get('/allcategories',[categoryController::class,'fetchCate'])->name('all-cate');
+//delete Category
+Route::get('/deletecategory{id}',[categoryController::class,'delete_cate'])->name('delete-cate');
 
+//Edit
+Route::get('/editcategory/{id}', [categoryController::class, 'editCate'])->name('edit-cate');
+Route::view('/updatecategory','Admin.EditCategory');
+// Update category form submit 
+Route::post('/Categoryupdate/{id}', [categoryController::class, 'cateupdate'])->name('cate-update');
