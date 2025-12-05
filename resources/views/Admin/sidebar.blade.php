@@ -101,14 +101,14 @@
       <div class="main-sidebar">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index.html">Stisla Lite</a>
+            <a href="index.html">Glamora</a>
           </div>
           <div class="sidebar-user">
             <div class="sidebar-user-picture">
-              <img alt="image" src="../dist/img/avatar/avatar-1.jpeg">
+              <img alt="image" src="../admin/dist/img/avatar/avatar-1.jpeg">
             </div>
             <div class="sidebar-user-details">
-              <div class="user-name">Ujang Maman</div>
+              <div class="user-name">Beauty & Jewels</div>
               <div class="user-role">
                 Administrator
               </div>
@@ -122,7 +122,7 @@
 
             <li class="menu-header">User Data</li>
             <li>
-              <a href="#" class="has-dropdown"><i class="ion ion-ios-albums-outline"></i><span>User Info</span></a>
+              <a href="#" class="has-dropdown"><i class="ion ion-person"></i><span>User Info</span></a>
               <ul class="menu-dropdown">
                 <li><a href="{{route('fetch-user')}}"><i class="ion ion-ios-circle-outline"></i> All Users</a></li>
                 <li><a href="components.html"><i class="ion ion-ios-circle-outline"></i> Add User</a></li>
@@ -130,14 +130,18 @@
               </ul>
             </li>
             <li>
-              <a href="#" class="has-dropdown"><i class="ion ion-flag"></i><span>Categories</span></a>
+              <a href="#" class="has-dropdown"><i class="ion ion-grid"></i><span>Categories</span></a>
               <ul class="menu-dropdown">
                 <li><a href="{{route('all-cate')}}"><i class="ion ion-ios-circle-outline"></i> All Category</a></li>
                 <li><a href="{{route('cate')}}"><i class="ion ion-ios-circle-outline"></i> Add Category</a></li>
               </ul>
             </li>
+                  <!-- Dashboard product -->
             <li>
-              <a href="table.html"><i class="ion ion-clipboard"></i><span>Tables</span></a>
+              <a href="{{route('product')}}"><i class="ion ion-cube"></i><span>Products</span></a>
+
+
+
             </li>
             <li>
               <a href="chartjs.html"><i class="ion ion-stats-bars"></i><span>Chart.js</span></a>

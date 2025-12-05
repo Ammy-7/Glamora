@@ -61,3 +61,6 @@ Route::get('/editcategory/{id}', [categoryController::class, 'editCate'])->name(
 Route::view('/updatecategory','Admin.EditCategory');
 // Update category form submit 
 Route::post('/Categoryupdate/{id}', [categoryController::class, 'cateupdate'])->name('cate-update');
+
+//Product//
+Route::view('/product','Admin.product')->name('product');
