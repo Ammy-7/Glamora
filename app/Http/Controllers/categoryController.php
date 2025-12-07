@@ -16,7 +16,7 @@ public function add(Request $req)
     $data = $req->validate([
         'catename' => 'required|string|unique:categories,name|max:255',
         'desc' => 'nullable|string',
-        'cateimage' => 'required|image|mimes:png,jpg,jpeg,AVIF file|max:2000'
+        'cateimage' => 'required|image|mimes:png,jpg,jpeg |max:2000'
     ]);
     $file=$req->file('cateimage')->store('images','public');
     $url=basename($file);
@@ -61,27 +61,36 @@ public function editCate($id){
 
 // update Category
 
-public function cateupdate(Request $req , $id){
-    $category=Category::find($id);
-    $category->name=$req['catename'];
-    $category->desc=$req['desc'];
-    if($req->hasFile('cateimage')){
-        $oldurl=storage_path('app/public/images/'.$category->image);
-        if(File::exists($oldurl)){
-            File::delete($oldurl);
+public function cateupdate(Request $req, $id)
+{
+    $category = Category::find($id);
+
+    $req->validate([
+        'catename' => 'required|string|max:255',
+        'desc' => 'nullable|string',
+        'cateimage' => 'required|image|mimes:png,jpg,jpeg|max:2000'
+    ]);
+
+    $category->name = $req->catename;
+    $category->desc = $req->desc;
+
+    if ($req->hasFile('cateimage')) {
+
+        // Delete old
+        $oldPath = storage_path('app/public/images/' . $category->image);
+        if (File::exists($oldPath)) {
+            File::delete($oldPath);
         }
- $file=$req->file('cateimage')->store('images','public');
-    $url=basename($file);
-    $category->image=$url;
-     $category->save();
-     return redirect()->route('all-cate')->with('successfull','Category updated successfully...');
-    }
-  else{
-      $category->save();
-      return redirect()->route('all-cate')->with('successfull','Category updated successfully...');
+
+        // Upload new
+        $file = $req->file('cateimage')->store('images', 'public');
+        $category->image = basename($file);
     }
 
-  
+    $category->save();
 
+    return redirect()->route('all-cate')
+        ->with('successfull', 'Category updated successfully...');
 }
+
 }
