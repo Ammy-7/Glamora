@@ -64,3 +64,9 @@ Route::post('/Categoryupdate/{id}', [categoryController::class, 'cateupdate'])->
 
 //Product//
 Route::view('/product','Admin.product')->name('product');
+
+//single-product//
+Route::view('/single-product','User.single-product')->name('single-product');
+
+//add-product//
+Route::view('/add-product','User.add-product')->name('add-product');

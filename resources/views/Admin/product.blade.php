@@ -12,12 +12,6 @@
 
         
             <h1 class="mt-5">ALL Product</h1>
-            
-            
-   
-              
-        
-    
     
 {{-- @endsection --}}
 @endsection

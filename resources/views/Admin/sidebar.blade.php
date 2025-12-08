@@ -105,7 +105,7 @@
           </div>
           <div class="sidebar-user">
             <div class="sidebar-user-picture">
-              <img alt="image" src="../admin/dist/img/avatar/avatar-1.jpeg">
+              <img alt="image" src="../admin/dist/img/avatar/Adm-logo.jpg">
             </div>
             <div class="sidebar-user-details">
               <div class="user-name">Beauty & Jewels</div>
