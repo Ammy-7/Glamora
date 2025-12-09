@@ -7,8 +7,6 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
-use function Laravel\Prompts\error;
-
 class categoryController extends Controller
 {
 public function add(Request $req)

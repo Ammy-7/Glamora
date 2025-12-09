@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\authController;
 use App\Http\Controllers\categoryController;
+use App\Http\Controllers\productController;
 use App\Http\Middleware\validation;
 use Illuminate\Support\Facades\Route;
 
@@ -27,7 +28,7 @@ Route::post('/logindata' , [authController::class , "login"])->name('l_Data');
 Route::get('/logout' , [authController::class , "logout"])->name('logout');
 
 //Admin
-Route::view('/dashboard', 'Admin.dashboard')->name('admin'); //->middleware(validation::class);
+Route::view('/dashboard', 'Admin.dashboard')->name('admin')->middleware(validation::class);
 //sidebar
 Route::view('/sidebar','Admin.sidebar')->name('sidebar');
 
@@ -70,3 +71,11 @@ Route::view('/single-product','User.single-product')->name('single-product');
 
 //add-product//
 Route::view('/add-product','User.add-product')->name('add-product');
+
+// Products
+Route::get('/Addproducts', [productController::class, 'add_pro'])->name('add-pro');
+Route::post('/insert/product',[productController::class,'insert'])->name('insert-pro');
+//All products
+Route::get('/allproducts',[productController::class,'fetch_pro'])->name('all-pro');
+//delete products
+Route::get('/delete/product{id}',[productController::class,'delete_pro'])->name('delete-pro');
