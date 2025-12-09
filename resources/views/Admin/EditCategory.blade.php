@@ -18,22 +18,22 @@
     </h1>
     
     <div class="row">
-<form action="{{route('cate-update',$data->id)}}" method="post" >
+<form action="{{route('cate-update',$data->id)}}" method="post" enctype="multipart/form-data">
     @csrf
 
     <input type="text" placeholder="Enter Your Name" name="catename" class="form-control mt-3 rounded-3" value="{{$data->name}}">
-    @error('name')
+    @error('catename')
 
          <p style="font-variant: small-caps; color:red; font-weight:500">{{$message}}</p>
     @enderror
     <textarea name="desc" id="" cols="30" class="form-control mt-3" >{{$data->desc}}</textarea>
-    @error('email')
+    @error('desc')
     <p style="font-variant: small-caps; color:red ; font-weight:500">{{$message}}</p>
         
     @enderror
     <input type="file"  name="cateimage" class="form-control mt-3 rounded-3">
     <img src="{{url('storage/images/'.$data->image)}}" alt="" height="180px" class="form-control mt-4">
-    @error('role')
+    @error('cateimage')
  <p style="font-variant: small-caps; color:red; font-weight:500">{{$message}}</p>
         
     @enderror
