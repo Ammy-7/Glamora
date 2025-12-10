@@ -79,3 +79,8 @@ Route::post('/insert/product',[productController::class,'insert'])->name('insert
 Route::get('/allproducts',[productController::class,'fetch_pro'])->name('all-pro');
 //delete products
 Route::get('/delete/product{id}',[productController::class,'delete_pro'])->name('delete-pro');
+//Edit
+Route::get('/editproduct/{id}', [productController::class, 'editpro'])->name('edit-pro');
+Route::view('/updatecategory','Admin.EditCategory');
+// Update category form submit 
+Route::post('/productupdate/{id}', [productController::class, 'pro_update'])->name('pro-update');

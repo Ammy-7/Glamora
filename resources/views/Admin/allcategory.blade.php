@@ -13,7 +13,7 @@
 </head>
 <body>
    <div class="container">
-    <div class="row mt-4">
+    <div class="row mt-5">
         <div class="col-md-10 offset-2  text-center">
             @if (session('successfull'))
                 <div class="alert alert-success">
@@ -38,7 +38,7 @@
         <td>{{$data->id}}</td>
         <td>{{$data->name}}</td>
         <td>{{$data->desc}}</td>
-        <td><img src="{{url('storage/images/'.$data->image)}}" alt="" width="100px"></td>
+        <td><img src="{{url('storage/images/'.$data->image)}}" alt="no image" width="100"></td>
 
 <td>       
     

@@ -50,7 +50,7 @@
 <td>       
     
     
-    <a href="{{route('edit-cate',$data->id)}}"><i class="fa-solid fa-pen-to-square"></i></a>||
+    <a href="{{route('edit-pro',$data->id)}}"><i class="fa-solid fa-pen-to-square"></i></a>||
 <a href="{{route('delete-pro',$data->id)}}" onclick="return confirm('Are you sure you want to delete this product?')"><i class="fa-solid fa-trash"></i></a>
 </td>         
    </tr>

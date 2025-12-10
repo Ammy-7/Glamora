@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class productController extends Controller
 {
@@ -61,4 +62,45 @@ public function delete_pro($id){
 return redirect()->route('all-pro');
 }
 
+// Edit products
+
+public function editpro($id){
+    $productData=Product::find($id);
+    $category=Category::all();
+
+    return view('Admin.products.edit',compact('productData','category'));
 }
+ // Update function
+    public function pro_update(Request $request, $id)
+    {
+       
+
+        $product = Product::find($id);
+
+        $product->name = $request->pro_name;
+        $product->price = $request->price;
+        $product->quantity = $request->quantity;
+        $product->desc = $request->desc;
+        $product->category_id = $request->category_id;
+
+        // Agar image upload hui hai
+          if ($request->hasFile('pro_image')) {
+
+        // Delete old
+        $oldPath = storage_path('app/public/product-images/' . $product->image);
+        if (File::exists($oldPath)) {
+            File::delete($oldPath);
+        }
+
+        // Upload new
+        $file = $request->file('pro_image')->store('product-images', 'public');
+        $product->image = basename($file);
+    }
+
+    $product->save();
+
+        return redirect()->route('all-pro')->with('success', 'Product updated successfully!');
+    }
+}
+
+

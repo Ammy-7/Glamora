@@ -6,14 +6,14 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" name="viewport">
   <title>Dashboard &mdash; Stisla</title>
 
-  <link rel="stylesheet" href="{{asset('../admin/dist/modules/bootstrap/css/bootstrap.min.css')}}">
-  <link rel="stylesheet" href="{{asset('../admin/dist/modules/ionicons/css/ionicons.min.css')}}">
-  <link rel="stylesheet" href="{{asset('../admin/dist/modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css')}}">
+  <link rel="stylesheet" href="{{asset('admin/dist/modules/bootstrap/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{asset('admin/dist/modules/ionicons/css/ionicons.min.css')}}">
+  <link rel="stylesheet" href="{{asset('admin/dist/modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css')}}">
 
-  <link rel="stylesheet" href="{{asset('../admin/dist/modules/summernote/summernote-lite.css')}}">
-  <link rel="stylesheet" href="{{asset('../admin/dist/modules/flag-icon-css/css/flag-icon.min.css')}}">
-  <link rel="stylesheet" href="{{asset('../admin/dist/css/demo.css')}}">
-  <link rel="stylesheet" href="{{asset('../admin/dist/css/style.css')}}">
+  <link rel="stylesheet" href="{{asset('admin/dist/modules/summernote/summernote-lite.css')}}">
+  <link rel="stylesheet" href="{{asset('admin/dist/modules/flag-icon-css/css/flag-icon.min.css')}}">
+  <link rel="stylesheet" href="{{asset('admin/dist/css/demo.css')}}">
+  <link rel="stylesheet" href="{{asset('admin/dist/css/style.css')}}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
@@ -209,16 +209,16 @@
     </div>
   </div>
 
-  <script src="{{asset('../admin/dist/modules/jquery.min.js')}}"></script>
-  <script src="{{asset('../admin/dist/modules/popper.js')}}"></script>
-  <script src="{{asset('../admin/dist/modules/tooltip.js')}}"></script>
-  <script src="{{asset('../admin/dist/modules/bootstrap/js/bootstrap.min.js')}}"></script>
-  <script src="{{asset('../admin/dist/modules/nicescroll/jquery.nicescroll.min.js')}}"></script>
-  <script src="{{asset('../admin/dist/modules/scroll-up-bar/dist/scroll-up-bar.min.js')}}"></script>
-  <script src="{{asset('../admin/dist/js/sa-functions.js')}}"></script>
+  <script src="{{asset('admin/dist/modules/jquery.min.js')}}"></script>
+  <script src="{{asset('admin/dist/modules/popper.js')}}"></script>
+  <script src="{{asset('admin/dist/modules/tooltip.js')}}"></script>
+  <script src="{{asset('admin/dist/modules/bootstrap/js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('admin/dist/modules/nicescroll/jquery.nicescroll.min.js')}}"></script>
+  <script src="{{asset('admin/dist/modules/scroll-up-bar/dist/scroll-up-bar.min.js')}}"></script>
+  <script src="{{asset('admin/dist/js/sa-functions.js')}}"></script>
   
-  <script src="{{asset('../admin/dist/modules/chart.min.js')}}"></script>
-  <script src="{{asset('../admin/dist/modules/summernote/summernote-lite.js')}}"></script>
+  <script src="{{asset('admin/dist/modules/chart.min.js')}}"></script>
+  <script src="{{asset('admin/dist/modules/summernote/summernote-lite.js')}}"></script>
 
   <script>
   var ctx = document.getElementById("myChart").getContext('2d');
@@ -257,8 +257,8 @@
     }
   });
   </script>
-  <script src="{{asset('../admin/dist/js/scripts.js')}}"></script>
-  <script src="{{asset('../admin/dist/js/custom.js')}}"></script>
-  <script src="{{asset('../admin/dist/js/demo.js')}}"></script>
+  <script src="{{asset('admin/dist/js/scripts.js')}}"></script>
+  <script src="{{asset('admin/dist/js/custom.js')}}"></script>
+  <script src="{{asset('admin/dist/js/demo.js')}}"></script>
 </body>
 </html>

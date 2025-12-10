@@ -16,7 +16,15 @@
              <h1 class="text-center mt-4" style="font-variant:small-caps;">
         update form
     </h1>
-    
+    @if (session('successfull')){
+        <div class="alert alert-success">
+{{session('successfull')}}</div>
+
+    }
+        
+
+        
+    @endif
     <div class="row">
 <form action="{{route('cate-update',$data->id)}}" method="post" enctype="multipart/form-data">
     @csrf
