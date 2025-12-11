@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -9,6 +8,7 @@ use Illuminate\Support\Facades\File;
 
 class categoryController extends Controller
 {
+
 public function add(Request $req)
 {
     $data = $req->validate([
@@ -90,5 +90,7 @@ public function cateupdate(Request $req, $id)
     return redirect()->route('all-cate')
         ->with('successfull', 'Category updated successfully...');
 }
+
+
 
 }
