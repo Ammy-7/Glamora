@@ -117,20 +117,19 @@
           <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
             <li class="active">
-              <a href="index.html"><i class="ion ion-speedometer"></i><span>Dashboard</span></a>
+              <a href="index.html"><i class="fa-solid fa-rocket"></i><span>Dashboard</span></a>
+            </li>
+   
+            <!-- order -->
+            <li>
+              <a href="{{route('all-orders')}}"><i class="fa-brands fa-opencart "></i></i><span>Order</span></a>            
             </li>
 
-            <li class="menu-header">User Data</li>
-            <li>
-              <a href="#" class="has-dropdown"><i class="ion ion-person"></i><span>User Info</span></a>
-              <ul class="menu-dropdown">
-                <li><a href="{{route('fetch-user')}}"><i class="ion ion-ios-circle-outline"></i> All Users</a></li>
-                <li><a href="components.html"><i class="ion ion-ios-circle-outline"></i> Add User</a></li>
-              
-              </ul>
+                      <li>
+              <a href="{{route('fetch-user')}}"><i class="fa-solid fa-users"></i> <span>All Users</span></a>            
             </li>
             <li>
-              <a href="#" class="has-dropdown"><i class="ion ion-grid"></i><span>Categories</span></a>
+              <a href="#" class="has-dropdown"><i class="fa-solid fa-layer-group"></i><span>Categories</span></a>
               <ul class="menu-dropdown">
                 <li><a href="{{route('all-cate')}}"><i class="ion ion-ios-circle-outline"></i> All Category</a></li>
                 <li><a href="{{route('cate')}}"><i class="ion ion-ios-circle-outline"></i> Add Category</a></li>
@@ -138,32 +137,20 @@
             </li>
                   <!-- Dashboard product -->
             <li>
-                 <a href="#" class="has-dropdown"><i class="ion ion-cube"></i><span>Products</span></a>
+                 <a href="#" class="has-dropdown"><i class="fa-solid fa-cube"></i><span>Products</span></a>
               <ul class="menu-dropdown">
                 <li><a href="{{route('all-pro')}}"><i class="ion ion-ios-circle-outline"></i> All Products</a></li>
                 <li><a href="{{route('add-pro')}}"><i class="ion ion-ios-circle-outline"></i> Add Product</a></li>
               </ul>
             </li>
             </li>
-            
-            <!-- order -->
-            <li>
-              <a href="{{route('order')}}"><i class="ion ion-stats-bars"></i><span>Order</span></a>            
-            </li>
-
-            <li>
-              <a href="simple.html"><i class="ion ion-ios-location-outline"></i><span>Google Maps</span></a>
+         <li>
+              <a href="simple.html"><i class="fa-brands fa-webflow"></i><span>Website</span></a>
             </li>
             <li>
-              <a href="#" class="has-dropdown"><i class="ion ion-ios-copy-outline"></i><span>Examples</span></a>
-              <ul class="menu-dropdown">
-                <li><a href="login.html"><i class="ion ion-ios-circle-outline"></i> Login</a></li>
-                <li><a href="register.html"><i class="ion ion-ios-circle-outline"></i> Register</a></li>
-                <li><a href="forgot.html"><i class="ion ion-ios-circle-outline"></i> Forgot Password</a></li>
-                <li><a href="reset.html"><i class="ion ion-ios-circle-outline"></i> Reset Password</a></li>
-                <li><a href="404.html"><i class="ion ion-ios-circle-outline"></i> 404</a></li>
-              </ul>
+              <a href="simple.html"><i class="fa-solid fa-map-location-dot"></i><span>Google Maps</span></a>
             </li>
+        
 
             <li class="menu-header">More</li>
             <li>
@@ -191,7 +178,11 @@
             </li>
             <li>
               <a href="credits.html"><i class="ion ion-ios-information-outline"></i> Credits</a>
-            </li>          </ul>
+            </li>    
+            <li>
+              <a href="{{route('logout')}}"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a>
+            </li>     
+           </ul>
           <div class="p-3 mt-4 mb-4">
             <a href="http://stisla.multinity.com/" class="btn btn-danger btn-shadow btn-round has-icon has-icon-nofloat btn-block">
               <i class="ion ion-help-buoy"></i> <div>Go PRO!</div>
