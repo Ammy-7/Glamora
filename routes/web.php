@@ -3,8 +3,10 @@
 use App\Http\Controllers\authController;
 use App\Http\Controllers\categoryController;
 use App\Http\Controllers\productController;
+use App\Http\Controllers\OrderController;
 use App\Http\Middleware\validation;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Support\Facades\DB;
 
 Route::get('/', function () {
     return view('User.index');
@@ -84,3 +86,10 @@ Route::get('/editproduct/{id}', [productController::class, 'editpro'])->name('ed
 Route::view('/updatecategory','Admin.EditCategory');
 // Update category form submit 
 Route::post('/productupdate/{id}', [productController::class, 'pro_update'])->name('pro-update');
+
+//All orders
+Route::get('/orders',[OrderController::class,'Orders'])->name('all-orders');
+
+//contact
+
+Route::view('/contact', 'user.contact')->name('contact');

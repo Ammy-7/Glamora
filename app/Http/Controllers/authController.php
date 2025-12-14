@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Support\Facades\DB;
 
 class authController extends Controller
 {
@@ -85,6 +86,11 @@ else{
     return back()->with('error','user not updated!!!!');
 }
 }
+
+
+
+
+
 }
 
 

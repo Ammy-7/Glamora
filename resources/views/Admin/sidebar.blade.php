@@ -105,7 +105,7 @@
           </div>
           <div class="sidebar-user">
             <div class="sidebar-user-picture">
-              <img alt="image" src="../admin/dist/img/avatar/Adm-logo.jpg">
+              <img alt="image" src="admin/dist/img/avatar/Admin-logo.jpg">
             </div>
             <div class="sidebar-user-details">
               <div class="user-name">Beauty & Jewels</div>
@@ -138,17 +138,19 @@
             </li>
                   <!-- Dashboard product -->
             <li>
-                 <a href="#" class="has-dropdown"><i class="ion ion-grid"></i><span>Products</span></a>
+                 <a href="#" class="has-dropdown"><i class="ion ion-cube"></i><span>Products</span></a>
               <ul class="menu-dropdown">
                 <li><a href="{{route('all-pro')}}"><i class="ion ion-ios-circle-outline"></i> All Products</a></li>
                 <li><a href="{{route('add-pro')}}"><i class="ion ion-ios-circle-outline"></i> Add Product</a></li>
               </ul>
             </li>
-
             </li>
+            
+            <!-- order -->
             <li>
-              <a href="chartjs.html"><i class="ion ion-stats-bars"></i><span>Chart.js</span></a>
+              <a href="{{route('order')}}"><i class="ion ion-stats-bars"></i><span>Order</span></a>            
             </li>
+
             <li>
               <a href="simple.html"><i class="ion ion-ios-location-outline"></i><span>Google Maps</span></a>
             </li>
