@@ -598,6 +598,7 @@ section
 	-ms-transition: color 0.3s ease;
 	-o-transition: color 0.3s ease;
 	transition: color 0.3s ease;
+	cursor: pointer;
 }
 .navbar_user li a:hover
 {

@@ -6,7 +6,7 @@ use App\Http\Controllers\productController;
 use App\Http\Controllers\OrderController;
 use App\Http\Middleware\validation;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Http\Support\Facades\DB;
+
 
 Route::get('/', function () {
     return view('User.index');
@@ -16,14 +16,10 @@ Route::get('/', function () {
 //     return view('user.index');
 // });
 
-//register
-Route::view('/RegisterPage', 'auth.register')->name('Register');
-
 //register data
 Route::post('/registerData' , [authController::class , "Register"])->name('R_Data');
 
 //loginPage
-Route::view('/login_page', 'auth.login')->name('login');
 Route::post('/logindata' , [authController::class , "login"])->name('l_Data');
 
 //logout
@@ -91,5 +87,10 @@ Route::post('/productupdate/{id}', [productController::class, 'pro_update'])->na
 Route::get('/orders',[OrderController::class,'Orders'])->name('all-orders');
 
 //contact
-
 Route::view('/contact', 'user.contact')->name('contact');
+
+
+// Shop //
+Route::get('/shop', [productController::class,"fatchproduct"])->name('shop');
+Route::get('/cart{id}', [productController::class,"cart"])->name('cart');
+

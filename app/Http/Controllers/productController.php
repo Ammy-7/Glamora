@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
 class productController extends Controller
@@ -101,6 +103,35 @@ public function editpro($id){
 
         return redirect()->route('all-pro')->with('success', 'Product updated successfully!');
     }
+
+
+function fatchproduct(){
+
+    $products=Product::all();
+    return view('User.shop',compact('products'));
+
+}
+
+function cart($id){
+    $product=Product::find($id);
+    $userid=Auth::user()->id;
+
+    $order=new Order();
+    $order->product_id=$product->id;
+    $order->user_id=$userid;
+    $order->quentity=1;
+$order->save();
+    if($order){
+        return "order confirm";
+    }
+    else{
+        return "not the order";
+    }
+}
+
+
+
+
 }
 
 

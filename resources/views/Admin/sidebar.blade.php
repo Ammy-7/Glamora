@@ -145,7 +145,7 @@
             </li>
             </li>
          <li>
-              <a href="simple.html"><i class="fa-brands fa-webflow"></i><span>Website</span></a>
+              <a href="{{route('index')}}"><i class="fa-brands fa-webflow"></i><span>Website</span></a>
             </li>
             <li>
               <a href="simple.html"><i class="fa-solid fa-map-location-dot"></i><span>Google Maps</span></a>
@@ -191,7 +191,15 @@
         </aside>
       </div>
 
-@yield('admin')
+
+      <div class="main-content">
+        <section class="section">
+          <h1 class="section-header">
+            <div>Dashboard</div>
+          </h1>
+        @yield('admin')
+        </section>
+      </div>
 
       <footer class="main-footer">
         <div class="footer-left">

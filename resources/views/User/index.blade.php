@@ -14,6 +14,52 @@
 <link rel="stylesheet" type="text/css" href="user/plugins/OwlCarousel2-2.2.1/animate.css">
 <link rel="stylesheet" type="text/css" href="user/styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="user/styles/responsive.css">
+
+      <style>
+        .modal-content{
+          background: none;
+          border: none;
+        }
+#form_l{
+    border: 2px solid rgb(78, 77, 77);
+    padding: 20px 45px;
+    border-radius: 30px 0 30px 0;
+    width:400px ;
+    background: #ffffff;
+}
+#input_f::placeholder{
+font-variant:small-caps; 
+font-weight: 500;
+}
+#h2{
+  font-variant: small-caps;
+  font-weight: bold;
+
+
+}
+#button_1{
+ display: flex;
+ justify-content: space-between
+}
+#button_1 a{
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+}
+#button_1 a:hover{
+  text-decoration: underline;
+}
+
+#input_f{
+    border: 2px solid rgb(207, 207, 207);
+    border-radius:10px; 
+    width: 100%;
+}
+
+
+    </style>
 </head>
 
 <body>
@@ -68,8 +114,8 @@
 										<i class="fa fa-angle-down"></i>
 									</a>
 									<ul class="account_selection">
-										<li><a href="{{route('login')}}"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
-										<li><a href="{{route('Register')}}"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
+										<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
+										<li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -91,7 +137,7 @@
 						<nav class="navbar">
 							<ul class="navbar_menu">
 								<li><a href="#">home</a></li>
-								<li><a href="#">shop</a></li>
+								<li><a href="{{route('shop')}}">shop</a></li>
 								<li><a href="#">promotion</a></li>
 								<li><a href="#">pages</a></li>
 								<li><a href="#">blog</a></li>
@@ -99,7 +145,7 @@
 							</ul>
 							<ul class="navbar_user">
 								<li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+								<li><a href="#" data-bs-toggle="modal" data-bs-target="#my_modal" role="button" data-bs-dismiss="modal"><i class="fa fa-user" aria-hidden="true"></i></a></li>
 								<li class="checkout">
 									<a href="#">
 										<i class="fa fa-shopping-cart" aria-hidden="true"></i>
@@ -117,6 +163,72 @@
 		</div>
 
 	</header>
+
+
+
+
+	{{-- <---Modal---> --}}
+
+	 <div class="modal fade" id="my_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered">
+<div class="modal-content">
+   <form action="{{route('R_Data')}}" method="post" id="form_l" class="m-4" >
+    @csrf
+    <h2 id="h2" class="text-center">Register form</h2>
+
+    <input id="input_f" type="text" placeholder="Enter Your Name" name="name" class="form-control mt-3 " value="{{old('name')}}">
+    @error('name')
+
+         <p style="font-variant: small-caps; color:red; font-weight:500">{{$message}}</p>
+    @enderror
+    <input id="input_f" type="email" placeholder="Enter Your Email" name="email" class="form-control mt-3" value="{{old('email')}}">
+    @error('email')
+    <p style="font-variant: small-caps; color:red ; font-weight:500">{{$message}}</p>
+        
+    @enderror
+    <input id="input_f" type="password" placeholder="Enter Your Password" name="password" class="form-control mt-3" value="{{old('password')}}">
+    @error('password')
+ <p style="font-variant: small-caps; color:red; font-weight:500">{{$message}}</p>
+        
+    @enderror
+    <div id="button_1" >
+      <a href="" class=" btn mt-4" data-bs-toggle="modal" data-bs-target="#my_modal_2" role="button" data-bs-dismiss="modal">I hava Already Exist</a>
+      <button class="btn btn-warning mt-4 rounded-3" style="font-variant: small-caps; font-weight:bold;">submit</button></div>
+
+   
+</form>
+</div>
+ </div>
+  </div>
+<div class="modal fade" id="my_modal_2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<form action="{{route('l_Data')}}" method="post" id="form_l" >
+    @csrf
+
+    <h2  id="h2" class="text-center">Login form</h2>
+
+
+    <input  id="input_f" type="email" placeholder="Enter Your Email" name="email" class="form-control mt-3" value="{{old('email')}}">
+    @error('email')
+     <p style="font-variant: small-caps; color:red; font-weight:500">{{$message}}</p>
+    
+        
+    @enderror
+    <input  id="input_f"type="password" placeholder="Enter Your Password" name="password" class="form-control mt-3" value="{{old('password')}}">
+    @error('password')
+ <p style="font-variant: small-caps; color:red; font-weight:500">{{$message}}</p>
+        
+    @enderror
+<div id="button_1" class="text-center" >
+
+      <button class="btn btn-warning mt-4 " style="font-variant: small-caps; font-weight:bold;">login</button></div>
+   
+</form>
+</div>
+ </div>
+  </div>
+  {{-- <---MOdal end ---> --}}
 
 	<div class="fs_menu_overlay"></div>
 	<div class="hamburger_menu">
@@ -158,7 +270,7 @@
 					</ul>
 				</li>
 				<li class="menu_item"><a href="#">home</a></li>
-				<li class="menu_item"><a href="#">shop</a></li>
+				<li class="menu_item"><a href="">shop</a></li>
 				<li class="menu_item"><a href="#">promotion</a></li>
 				<li class="menu_item"><a href="#">pages</a></li>
 				<li class="menu_item"><a href="#">blog</a></li>
@@ -807,7 +919,8 @@
 	</footer>
 
 </div>
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 <script src="user/js/jquery-3.2.1.min.js"></script>
 <script src="user/styles/bootstrap4/popper.js"></script>
 <script src="user/styles/bootstrap4/bootstrap.min.js"></script>
@@ -815,6 +928,21 @@
 <script src="user/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="user/plugins/easing/easing.js"></script>
 <script src="user/js/custom.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+@if(session('openLoginModal'))
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let loginModal = new bootstrap.Modal(
+        document.getElementById('my_modal_2')
+    );
+    loginModal.show();
+});
+</script>
+@endif
+
 </body>
 
 </html>

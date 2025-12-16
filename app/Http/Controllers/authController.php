@@ -20,7 +20,8 @@ $data=$req->validate([
 
 
 if($user){
-    return redirect()->route('login')->with('success','Registered successfully....');
+        return redirect()->route('index')->with('openLoginModal', true);
+    // return redirect()->route('login')->with('success','Registered successfully....');
 }
 else{
     return back()->with('error','Registration failed!!!');

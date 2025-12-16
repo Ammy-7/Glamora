@@ -1,13 +1,7 @@
 @extends('Admin.sidebar')
 
 @section('admin')
-  
-      <div class="main-content">
-        <section class="section">
-          <h1 class="section-header">
-            <div>Dashboard</div>
-          </h1>
-          <div class="row">
+    <div class="row">
             <div class="col-lg-3 col-md-6 col-12">
               <div class="card card-sm-3">
                 <div class="card-icon bg-primary">
@@ -278,7 +272,5 @@
               </div>
             </div>
           </div>
-        </section>
-      </div>
 
 @endsection
