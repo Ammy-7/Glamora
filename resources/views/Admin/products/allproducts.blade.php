@@ -13,15 +13,15 @@
 </head>
 <body>
    <div class="container">
-    <div class="row mt-4">
-        <div class="col-md-10 offset-2  text-center">
+    <div class="row mt-2">
+        <div class="col-md-12 text-center">
             @if (session('success'))
                 <div class="alert alert-success">
 {{session('success')}}</div>
 @endif
 
         
-            <h2 class="mt-4">ALL products</h2>
+            <h2 class="mt-2">ALL products</h2>
             <table class="table table-hover mt-4">
                 <thead>
             <tr>

@@ -48,11 +48,11 @@ font-weight: 500;
         
     @endif
    
-    <div class="container mt-5">
+    <div class="container mt-2">
         <div class="row">
             <div class="col-md-2">
         </div>
-        <div class="col-md-8 offset-1 ">
+        <div class="col-md-8">
   <form id="form" action="{{route('insert-pro')}}" method="post" enctype="multipart/form-data">
     @csrf
 
