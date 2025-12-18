@@ -13,17 +13,20 @@
 </head>
 <body>
    <div class="container">
-    <div class="row mt-5">
-        <div class="col-md-10 offset-2  text-center">
+    <div class="row">
+        <div class="col-md-12  text-center">
             @if (session('successfull'))
                 <div class="alert alert-success">
 {{session('successfull')}}</div>
 @endif
 
         
-            <h2 class="mt-4">ALL Categories</h2>
-            <table class="table table-hover mt-4">
-                <thead>
+           <h1 class="mt-2" style="font-variant: small-caps">All Categories</h1>
+                 <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body">
+<div class="table-responsive">
+            <table class="table align-middle text-center">
+                <thead class="table-dark">
             <tr>
                 <th>Id</th>
                 <th>Name</th>
@@ -43,8 +46,8 @@
 <td>       
     
     
-    <a href="{{route('edit-cate',$data->id)}}"><i class="fa-solid fa-pen-to-square"></i></a>||
-<a href="{{route('delete-cate',$data->id)}}" onclick="return confirm('Are you sure you want to delete this user?')"><i class="fa-solid fa-trash"></i></a>
+    <a style="color: green" href="{{route('edit-cate',$data->id)}}"><i class="fa-solid fa-pen-to-square"></i></a>||
+<a style="color: red" href="{{route('delete-cate',$data->id)}}" onclick="return confirm('Are you sure you want to delete this user?')"><i class="fa-solid fa-trash"></i></a>
 </td>         
    </tr>
           </tbody>
@@ -53,6 +56,9 @@
             </table>
           
         </div>
+    </div>
+</div>
+    </div>
     </div>
 </div>
     

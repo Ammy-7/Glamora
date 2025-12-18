@@ -4,15 +4,14 @@ use App\Http\Controllers\authController;
 use App\Http\Controllers\categoryController;
 use App\Http\Controllers\productController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\userController;
 use App\Http\Middleware\validation;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('User.index');
-});
+ Route::get('/', [userController::class,'view'])->name('home');
 
-// Route::get('/index', function () {
+// Route::get('/', function () {
 //     return view('user.index');
 // });
 
@@ -30,7 +29,7 @@ Route::view('/dashboard', 'Admin.dashboard')->name('admin')->middleware(validati
 //sidebar
 Route::view('/sidebar','Admin.sidebar')->name('sidebar');
 
-//users
+// //users
 Route::view('/indexPage', 'user.index')->name('index');
 
 // Allusers
@@ -94,3 +93,16 @@ Route::view('/contact', 'user.contact')->name('contact');
 Route::get('/shop', [productController::class,"fatchproduct"])->name('shop');
 Route::get('/cart{id}', [productController::class,"cart"])->name('cart');
 
+//cart
+Route::get('/showorder', [OrderController::class,"cartshow"])->name('cartshow');
+//remove order//
+Route::get('/removeOrder{id}',[OrderController::class,'Remove'])->name('remove_order');
+/* Checkout Page */
+Route::get('/checkout', [OrderController::class, 'index'])
+    ->name('checkout')
+    ->middleware('auth');
+
+Route::get('/checkout', [OrderController::class, 'checkout'])->name('checkout-order');
+Route::post('/place-order', [OrderController::class, 'placeOrder'])->name('place.order');
+// UserNavbar
+Route::get('/category', [userController::class, 'category'])->name('Cat.nav');

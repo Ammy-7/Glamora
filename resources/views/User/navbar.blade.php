@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="user/plugins/OwlCarousel2-2.2.1/animate.css">
     <link rel="stylesheet" type="text/css" href="user/styles/main_styles.css">
     <link rel="stylesheet" type="text/css" href="user/styles/responsive.css">   
+    <link rel="stylesheet" type="text/css" href="user/styles/product.css">   
 
     <style>
         .modal-content {
@@ -142,9 +143,9 @@
                             </div>
                             <nav class="navbar">
                                 <ul class="navbar_menu">
-                                    <li><a href="#">home</a></li>
+                                    <li><a href="{{route('home')}}">home</a></li>
                                     <li><a href="{{ route('shop') }}">shop</a></li>
-                                    <li><a href="#">promotion</a></li>
+                                    <li><a href="#">category</a></li>
                                     <li><a href="#">pages</a></li>
                                     <li><a href="#">blog</a></li>
                                     <li><a href="{{ route('contact') }}">contact</a></li>
@@ -155,9 +156,9 @@
                                             role="button" data-bs-dismiss="modal"><i class="fa fa-user"
                                                 aria-hidden="true"></i></a></li>
                                     <li class="checkout">
-                                        <a href="#">
+                                        <a href="{{route('cartshow')}}">
                                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                            <span id="checkout_items" class="checkout_items">2</span>
+                                            <span id="checkout_items" class="checkout_items">{{$number}}</span>
                                         </a>
                                     </li>
                                 </ul>

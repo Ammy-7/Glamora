@@ -108,7 +108,9 @@ public function editpro($id){
 function fatchproduct(){
 
     $products=Product::all();
-    return view('User.shop',compact('products'));
+                $userid=Auth::user()->id;
+$number = Order::where('user_id', $userid)->count();
+    return view('User.shop',compact('products','number'));
 
 }
 
@@ -122,11 +124,14 @@ function cart($id){
     $order->quentity=1;
 $order->save();
     if($order){
-        return "order confirm";
+        return redirect()->route('shop');
     }
     else{
-        return "not the order";
+        return redirect()->route('shop');
     }
+
+
+    
 }
 
 

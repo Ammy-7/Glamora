@@ -21,9 +21,12 @@
 @endif
 
         
-            <h2 class="mt-2">ALL products</h2>
-            <table class="table table-hover mt-4">
-                <thead>
+             <h1 class="mt-2" style="font-variant: small-caps">All Products</h1>
+                 <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body">
+<div class="table-responsive">
+            <table class="table align-middle text-center">
+                <thead class="table-dark">
             <tr>
                 <th>Id</th>
                 <th>Name</th>
@@ -50,8 +53,8 @@
 <td>       
     
     
-    <a href="{{route('edit-pro',$data->id)}}"><i class="fa-solid fa-pen-to-square"></i></a>||
-<a href="{{route('delete-pro',$data->id)}}" onclick="return confirm('Are you sure you want to delete this product?')"><i class="fa-solid fa-trash"></i></a>
+    <a style="color: green" href="{{route('edit-pro',$data->id)}}"><i class="fa-solid fa-pen-to-square"></i></a>||
+<a style="color: red" href="{{route('delete-pro',$data->id)}}" onclick="return confirm('Are you sure you want to delete this product?')"><i class="fa-solid fa-trash"></i></a>
 </td>         
    </tr>
           </tbody>
@@ -62,7 +65,9 @@
         </div>
     </div>
 </div>
-    
+      </div>
+    </div>
+</div>
     
 </body>
 </html>

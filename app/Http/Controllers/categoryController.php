@@ -66,7 +66,7 @@ public function cateupdate(Request $req, $id)
     $req->validate([
         'catename' => 'required|string|max:255',
         'desc' => 'nullable|string',
-        'cateimage' => 'required|image|mimes:png,jpg,jpeg|max:2000'
+        'cateimage' => 'image|mimes:png,jpg,jpeg|max:2000'
     ]);
 
     $category->name = $req->catename;

@@ -20,7 +20,7 @@ $data=$req->validate([
 
 
 if($user){
-        return redirect()->route('index')->with('openLoginModal', true);
+         return redirect('/')->with('openLoginModal', true);
     // return redirect()->route('login')->with('success','Registered successfully....');
 }
 else{
@@ -44,10 +44,15 @@ public function login(Request $l_req){
         return back()->with("error" ,'User not found....');
     }
 }
-public function logout(){
+public function logout(Request $request) {
     Auth::logout();
-    return view('Auth.login');
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+
+    // Login modal show karne ke liye flag set karein
+    return redirect('/')->with('openLoginModal', true);
 }
+
 
 
 

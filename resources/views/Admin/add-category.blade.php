@@ -37,13 +37,13 @@ font-weight: 500;
 
     </style>
   
-    <div class="container mt-4">
+    <div class="container ">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
         </div>
-        <div class="col-md-4 offset-1">
+        <div class="col-md-6">
             
-            <form class="mt-5" action="{{route('add-cate')}}" method="post" enctype="multipart/form-data" id="form">
+            <form class="mt-4" action="{{route('add-cate')}}" method="post" enctype="multipart/form-data" id="form">
                 @csrf
                   <h1 class="text-center" style="font-variant:small-caps;">add category</h1>
 <input id="input" class="form-control mt-4" type="text" placeholder="Enter name" name="catename">
@@ -61,7 +61,7 @@ font-weight: 500;
 <button id="button" class="btn mt-4" style="font-variant:small-caps;font-weight:bold;">submit</button>
 </form>
         </div>
-        <div class="col-md-4" ></div></div>
+        <div class="col-md-3" ></div></div>
     </div>
     
 @endsection

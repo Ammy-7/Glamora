@@ -21,7 +21,7 @@ if(Auth::user()->role == "admin"){
 return $next($request);
 }
 else{
-            return redirect()->route('index');
+            return redirect()->route('home');
         }
 
         }else{

@@ -34,10 +34,10 @@ font-weight: 500;
     
 </head>
 <body>
-   <div class="container mt-5">
+   <div class="container ">
     <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4 offset-1 ">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 ">
 <form action="{{ route('user.update', $data->id) }}" method="post" id="form" >
     @csrf
      <h1 class="text-center mt-4" style="font-variant:small-caps;">
@@ -65,7 +65,7 @@ font-weight: 500;
 </div>
 </div>
 
-        <div class="col-md-4"></div>
+        <div class="col-md-3"></div>
     </div>
     
 @endsection
