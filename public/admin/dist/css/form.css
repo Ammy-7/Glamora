@@ -1,0 +1,36 @@
+
+         #form {
+             border: 2px solid rgb(234, 232, 232);
+             padding: 0px 20px;
+             border-radius: 30px;
+             box-shadow: 10px 10px 10px gray;
+             background: transparent;
+         }
+
+         ::placeholder {
+             font-variant: small-caps;
+             font-weight: 500;
+         }
+
+         #button {
+             background: #574B90;
+             color: white;
+             border: none;
+             font-variant: small-caps;
+             font-size: 20px;
+             font-weight: 500;
+
+         }
+
+         #button:hover {
+             border: 2px solid #574B90;
+             color: #574B90;
+             background-color: transparent;
+             transition: all 0.5s ease;
+         }
+
+         #input {
+             border: 2px solid rgb(207, 207, 207);
+             border-radius: 10px;
+         }
+     

@@ -7,14 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Colo Shop Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="user/styles/bootstrap4/bootstrap.min.css">
-    <link href="user/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="user/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="user/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-    <link rel="stylesheet" type="text/css" href="user/plugins/OwlCarousel2-2.2.1/animate.css">
-    <link rel="stylesheet" type="text/css" href="user/styles/main_styles.css">
-    <link rel="stylesheet" type="text/css" href="user/styles/responsive.css">   
-    <link rel="stylesheet" type="text/css" href="user/styles/product.css">   
+    <link rel="stylesheet" href="{{asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css')}}"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="{{asset('user/styles/bootstrap4/bootstrap.min.css')}}">
+    <link href="{{asset('user/plugins/font-awesome-4.7.0/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{asset('user/plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('user/plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('user/plugins/OwlCarousel2-2.2.1/animate.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('user/styles/main_styles.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('user/styles/responsive.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('user/styles/product.css')}}">
 
     <style>
         .modal-content {
@@ -143,9 +146,28 @@
                             </div>
                             <nav class="navbar">
                                 <ul class="navbar_menu">
-                                    <li><a href="{{route('home')}}">home</a></li>
+                                    <li><a href="{{ route('home') }}">home</a></li>
                                     <li><a href="{{ route('shop') }}">shop</a></li>
-                                    <li><a href="#">category</a></li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle " href="#" id="categoryDropdown"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Categories
+                                        </a>
+
+                                        <ul class="dropdown-menu shadow border-0">
+
+                                            @foreach ($cateitem as $category)
+                                                <li>
+                                                    <a class="dropdown-item"
+                                                        href="{{route('Cat.nav' , $category->name )}}">
+                                                        {{ $category->name }}
+                                                    </a>
+                                                </li>
+                                            @endforeach
+
+                                        </ul>
+                                    </li>
+
                                     <li><a href="#">pages</a></li>
                                     <li><a href="#">blog</a></li>
                                     <li><a href="{{ route('contact') }}">contact</a></li>
@@ -156,9 +178,10 @@
                                             role="button" data-bs-dismiss="modal"><i class="fa fa-user"
                                                 aria-hidden="true"></i></a></li>
                                     <li class="checkout">
-                                        <a href="{{route('cartshow')}}">
+                                        <a href="{{ route('cartshow') }}">
                                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                            <span id="checkout_items" class="checkout_items">{{$number}}</span>
+                                            <span id="checkout_items"
+                                                class="checkout_items">{{ $number }}</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -178,9 +201,12 @@
 
         {{-- <---Modal---> --}}
 
+
+
         <div class="modal fade" id="my_modal" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog  modal-dialog-centered">
+
                 <div class="modal-content">
                     <form action="{{ route('R_Data') }}" method="post" id="form_l" class="m-4">
                         @csrf
@@ -228,7 +254,7 @@
                         @error('email')
                             <p style="font-variant: small-caps; color:red; font-weight:500">{{ $message }}</p>
                         @enderror
-                        <input id="input_f"type="password" placeholder="Enter Your Password" name="password"
+                        <input id="input_f" type="password" placeholder="Enter Your Password" name="password"
                             class="form-control mt-3" value="{{ old('password') }}">
                         @error('password')
                             <p style="font-variant: small-caps; color:red; font-weight:500">{{ $message }}</p>
@@ -321,13 +347,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
-    <script src="user/js/jquery-3.2.1.min.js"></script>
-    <script src="user/styles/bootstrap4/popper.js"></script>
-    <script src="user/styles/bootstrap4/bootstrap.min.js"></script>
-    <script src="user/plugins/Isotope/isotope.pkgd.min.js"></script>
-    <script src="user/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-    <script src="user/plugins/easing/easing.js"></script>
-    <script src="user/js/custom.js"></script>
+    <script src="{{asset('user/js/jquery-3.2.1.min.js')}}"></script>
+    <script src="{{asset('user/styles/bootstrap4/popper.js')}}"></script>
+    <script src="{{asset('user/styles/bootstrap4/bootstrap.min.js')}}"></script>
+    <script src="{{asset('user/plugins/Isotope/isotope.pkgd.min.js')}}"></script>
+    <script src="{{asset('user/plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
+    <script src="{{asset('user/plugins/easing/easing.js')}}"></script>
+    <script src="{{asset('user/js/custom.js')}}"></script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -342,6 +368,32 @@
             });
         </script>
     @endif
+    {{-- REGISTER MODAL --}}
+    @if ($errors->any())
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let registerModal = new bootstrap.Modal(
+                    document.getElementById('my_modal')
+                );
+                registerModal.show();
+            });
+        </script>
+    @endif
+
+    {{-- LOGIN MODAL (after success) --}}
+    @if (session('openLoginModal'))
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let loginModal = new bootstrap.Modal(
+                    document.getElementById('loginModal')
+                );
+                loginModal.show();
+            });
+        </script>
+    @endif
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

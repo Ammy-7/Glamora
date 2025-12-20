@@ -15,7 +15,9 @@ font-weight: 500;
 #button{
     background: #574B90;
     color: white;
-    border: none;
+    border: 2px solid transparent;
+     font-size: 20px;
+    font-weight: 500;
 }
 #button:hover {
     border: 2px solid rgb(207, 207, 207);
@@ -59,7 +61,7 @@ font-weight: 500;
  <p style="font-variant: small-caps; color:red; font-weight:500">{{$message}}</p>
         
     @enderror
-<button id="button" class="btn mt-4 mb-4" style="font-variant: small-caps; font-weight:bold;">update</button>
+<button id="button" class="btn mt-4 mb-4 w-100" style="font-variant: small-caps; font-weight:bold;">update</button>
    
 </form>
 </div>

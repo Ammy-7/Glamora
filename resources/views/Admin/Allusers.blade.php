@@ -31,7 +31,16 @@
         <td>{{$user->id}}</td>
         <td>{{$user->name}}</td>
         <td>{{$user->email}}</td>
-        <td>{{$user->role}}</td>
+        <<td>
+    @if($user->role === 'admin')
+        <span class="fw-bold" style="color: green;">
+            {{$user->role}}
+        </span>
+    @else
+        {{$user->role}}
+    @endif
+</td>
+
 <td>        <a style="color: green" href="{{route('edit',$user->id)}}"><i class="fa-solid fa-pen-to-square"></i></a>||
 <a style="color: red" href="{{route('delete-user',$user->id)}}" onclick="return confirm('Are you sure you want to delete this user?')"><i class="fa-solid fa-trash"></i></a>
 </td>         
@@ -47,6 +56,6 @@
       </div>
 </div>
     </div>
-{{-- @endsection --}}
+
 @endsection
 

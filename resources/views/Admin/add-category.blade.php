@@ -21,6 +21,8 @@ font-weight: 500;
     background: #574B90;
     color: white;
     border: transparent;
+     font-size: 20px;
+    font-weight: 500;
 }
 #button:hover {
     border: 2px solid #000;
@@ -58,7 +60,7 @@ font-weight: 500;
   <p style="font-variant: small-caps; color:red; font-weight:500">{{$message}}</p>
     
 @enderror
-<button id="button" class="btn mt-4" style="font-variant:small-caps;font-weight:bold;">submit</button>
+<button id="button" class="btn mt-4 w-100" style="font-variant:small-caps;font-weight:bold;">submit</button>
 </form>
         </div>
         <div class="col-md-3" ></div></div>

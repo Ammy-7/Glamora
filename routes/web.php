@@ -105,4 +105,9 @@ Route::get('/checkout', [OrderController::class, 'index'])
 Route::get('/checkout', [OrderController::class, 'checkout'])->name('checkout-order');
 Route::post('/place-order', [OrderController::class, 'placeOrder'])->name('place.order');
 // UserNavbar
-Route::get('/category', [userController::class, 'category'])->name('Cat.nav');
+ Route::get('/category/{name}', [userController::class, 'categoryProducts'])
+     ->name('Cat.nav');
+
+
+
+

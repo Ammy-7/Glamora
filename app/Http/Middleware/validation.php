@@ -21,12 +21,13 @@ if(Auth::user()->role == "admin"){
 return $next($request);
 }
 else{
-            return redirect()->route('home');
+            return redirect()->route('index');
         }
 
         }else{
-            return redirect()->route('login');
-        }
+             return redirect('/')->with('openLoginModal', true);
+}
+        
         
         
     }

@@ -26,6 +26,8 @@ font-weight: 500;
     background: #574B90;
     color: white;
     border: none;
+     font-size: 20px;
+    font-weight: 500;
 }
 #button:hover {
     border: 2px solid rgb(207, 207, 207);
@@ -121,7 +123,7 @@ font-weight: 500;
         </div>
 
         <div class="text-center mt-3">
-            <button id="button" class="btn mb-4">Submit</button>
+            <button id="button" class="btn mb-4 w-100">Submit</button>
         </div>
     </div>
 
