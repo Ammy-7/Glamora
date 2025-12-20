@@ -38,7 +38,7 @@
 
                     <!-- 📦 STOCK STATUS -->
                     @if($product->quantity > 0)
-                        <span class="badge bg-success mb-3">In Stock</span>
+                        <span class="badge  mb-3" style="color: #fff; background:grey">In Stock</span>
                     @else
                         <span class="badge bg-danger mb-3">Out of Stock</span>
                     @endif
@@ -47,7 +47,7 @@
                     <div class="d-grid mt-2">
                         @if($product->quantity > 0)
                             <a href="{{ route('cart', $product->id) }}"
-                               class="btn btn-success">
+                               class="btn " style="background: #FF6347; color:#fff;">
                                 🛒 Add to Cart
                             </a>
                         @else

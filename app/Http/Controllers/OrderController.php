@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Order;
@@ -39,7 +41,7 @@ function cartshow()
     $userid = Auth::id();
 
     $number = Order::where('user_id', $userid)->count();
-
+$cateitem=Category::all();
     $orders = Order::join('users', 'orders.user_id', '=', 'users.id')
         ->join('products', 'orders.product_id', '=', 'products.id')
         ->where('orders.user_id', $userid)
@@ -54,7 +56,7 @@ function cartshow()
         )
         ->get();
 
-    return view('User.cartshow', compact('orders', 'number'));
+    return view('User.cartshow', compact('orders', 'number' ,'cateitem'));
 }
 public function Remove($id){
  $Remove=Order::destroy($id);
@@ -65,9 +67,9 @@ return redirect()->route('cartshow');
  public function index()
     {
           $userid = Auth::id();
-
+$cateitem=Category::all();
     $number = Order::where('user_id', $userid)->count();
-        return view('User.checkout',compact('number'));
+        return view('User.checkout',compact('number','cateitem'));
     }
 
 
@@ -81,7 +83,7 @@ $userid = Auth::id();
 
 
       $userid = Auth::id();
-
+$cateitem=Category::all();
     $number = Order::where('user_id', $userid)->count();
     $orders = Order::join('users', 'orders.user_id', '=', 'users.id')
         ->join('products', 'orders.product_id', '=', 'products.id')
@@ -110,7 +112,7 @@ $userid = Auth::id();
     $total = $subtotal + $delivery;
     //return $subtotal;
 
-   return view('User.checkout', compact('orders', 'subtotal', 'delivery', 'total' ,'number'));
+   return view('User.checkout', compact('orders', 'subtotal', 'delivery', 'total' ,'number','cateitem'));
 }
 
 public function placeOrder(Request $request)

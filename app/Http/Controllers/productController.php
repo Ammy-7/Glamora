@@ -108,9 +108,10 @@ public function editpro($id){
 function fatchproduct(){
 
     $products=Product::all();
+     $cateitem=Category::all();
                 $userid=Auth::user()->id;
 $number = Order::where('user_id', $userid)->count();
-    return view('User.shop',compact('products','number'));
+    return view('User.shop',compact('products','number','cateitem'));
 
 }
 

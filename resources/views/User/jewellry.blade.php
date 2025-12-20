@@ -67,7 +67,7 @@
                     <div class="mt-auto d-grid ">
                         @if($product->quantity > 0)
                             <a href="{{ route('cart', $product->id) }}"
-                               class="btn btn-success">
+                               class="btn "style="background: #FF6347; color:#fff;">
                                 🛒 Add to Cart
                             </a>
                         @else
